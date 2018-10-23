@@ -5,9 +5,12 @@ body{
 header{
 	width:93%;margin-left:1%;
 	font-style:italic;border-bottom:1px solid (0,0,0,0.5);
-	background-color:#b4bdc6;background-size:100%;position:fixed;
+	background-size:100%;position:fixed;
 	transition:0.4s;
 	}
+.header{
+	background-color:#b4bdc6;
+}
 .h1{
 	font-size:2.5em;margin:0;padding-top:10px;display:block;text-align:center;
 }
@@ -29,6 +32,10 @@ nav ul li a{
 	padding:20px;
 	text-decoration:none;
 }
+.container{
+	margin-top:10%;
+	display: block;
+}
 .divi{
 	width:98%;
 	height:500px;
@@ -38,16 +45,16 @@ nav ul li a{
 
 }
 #ga{
-	margin-top:10%;
+	
 }
 h1{
 	font-size:2.5em;margin:0;padding-top:10px;display:block;
 }
 .body{
-	width:95%;
+	width:100%;
 	height:auto;
 	margin:auto;
-	border: 1px solid rgba(0,0,0,0.6);
+	border: 0.1px solid rgba(0,0,0,0.1);
 	transition:0.4s;
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
