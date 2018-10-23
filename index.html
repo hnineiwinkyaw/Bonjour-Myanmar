@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<link href= "index.css" type="text/css" rel = "stylesheet">
+</head>
+
+<body>
+	<header id = "head">
+		<h1 >Bonjour Myanmar</h1>
+
+		<nav id ="navb">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#destination">Destination</a></li>
+				<li><a href="#tour">Tour Program</a></li>
+				<li><a href="#hotel">Hotel</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+<br><br>
+	<main>
+		<div class = "divi" id="ga">
+			<h1 class="h1">Gallery</h1>
+		</div><br>
+		<div id="destination"></div><br>
+		<div class = "divi" >
+			<h1 class="h1">Destination</h1>
+		</div>
+		<div id="tour"></div><br>
+		<div class = "divi" >
+			<h1 class="h1">Tour</h1>
+		</div>
+		<div id="hotel"></div><br>
+		<div class = "divi" >
+			<h1 class="h1">Hotel</h1>
+		</div>
+	</main>
+	<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+   
+    document.getElementById("head").style.height = "52px";
+    document.getElementById("head").style.fontSize = "12px";
+
+  } else {
+    document.getElementById("head").style.height= "105px";
+    document.getElementById("head").style.fontSize = "16px";
+
+  }
+}
+</script>
+</body>
+
+</html>
