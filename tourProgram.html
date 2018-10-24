@@ -31,18 +31,13 @@
         top: 5px;
     }
     .nav li a{
-      padding:0 5 5 5px;color:white;transition:0.2s;margin-left: 10px;border-radius: 50px
+      padding:30px;color:white;transition:0.2s;
     }
     .navbar-brand{
       font-size:2.5em;color:white;margin-top:10px;transition:0.2s;
     }
-    .navbar{ height:80px; background: transparent;border:none;
+    .navbar{font-style:italic; height:80px; background-color: #4682B4;
 
-    }
-    .center{
-      padding-top: 10px;
-      display: flex;
-      justify-content: flex-end;
     }
     .navbar-right{
       font-size:1.5em;
@@ -52,9 +47,8 @@
     font-size:1.2em; /* The width is 100%, when the viewport is 800px or smaller */
   }
   .nav li a{
-      padding:5px;color:white;transition:0.2s;
+      padding:29px;color:white;transition:0.2s;
     }
-  
 
 }
  @media screen and (max-width: 1000.1px) {
@@ -65,11 +59,8 @@
     font-size:1em; /* The width is 100%, when the viewport is 800px or smaller */
 
   }
-  .item{
-    width: 100%
-  }
   .nav li a{
-      padding:5px;color:white;transition:0.2s;
+      padding:29px;color:white;transition:0.2s;
     }
 }
   @media screen and (max-width: 700px) {
@@ -81,16 +72,10 @@
     
   }
   .nav li a{
-      padding:5px;color:white;transition:0.2s; background-color:#67a1bc;margin-left: 0px;border-radius: 0px
+      padding:5px;color:white;transition:0.2s; background-color:#67a1bc;
     }
-    .nav ul {
-      display:inline;
-
+    .nav ul {display:inline;
      
-    }
-    .center{
-       padding-top: 0px;
-      display: block;
     }
    
 
@@ -100,7 +85,7 @@
   </head>
   <body>
   <div>
-   <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -117,16 +102,14 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <div class="center">
-         <ul class="nav navbar-nav navbar-right" >
-            <li><a id="item" class="item" href="#" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
-            <li><a id="item2" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Destination</a></li>
-            <li><a id="item3" href="tourProgram.html" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Tour Programs</a></li>
-            <li><a id="item5" href="#" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
-            <li><a id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a></li>
-            
-          </ul>
-      </div>
+     <ul class="nav navbar-nav navbar-right" >
+        <li><a href="#" style="color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
+        <li><a href="#" style="color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Destination</a></li>
+        <li><a href="tourProgram.html" style="color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Tour Programs</a></li>
+        <li><a href="#" style="color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
+        <li><a href="#" style="color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a></li>
+        
+      </ul>
      
      
     </div><!-- /.navbar-collapse -->
@@ -232,43 +215,5 @@
     Powered by <a href="#" style="color:#fff"> Ngar doe</a>
   </div>
 </div>
-
-<script>
-// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function() {scrollFunction()};
- function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-   
-    document.getElementById("nav").style.backgroundColor = "#4682B4";
-    document.getElementById("item").style.border = "2px";
-    document.getElementById("item").style.borderColor = "#fff";
-    document.getElementById("item").style.borderStyle = "solid";
-
-    document.getElementById("item2").style.border = "2px";
-    document.getElementById("item2").style.borderColor = "#fff";
-    document.getElementById("item2").style.borderStyle = "solid";
-
-    document.getElementById("item3").style.border = "2px";
-    document.getElementById("item3").style.borderColor = "#fff";
-    document.getElementById("item3").style.borderStyle = "solid";
-
-    document.getElementById("item4").style.border = "2px";
-    document.getElementById("item4").style.borderColor = "#fff";
-    document.getElementById("item4").style.borderStyle = "solid";
-
-    document.getElementById("item5").style.border = "2px";
-    document.getElementById("item5").style.borderColor = "#fff";
-    document.getElementById("item5").style.borderStyle = "solid";
-   } else {
-    document.getElementById("nav").style.background = "transparent";
-    document.getElementById("item").style.border = "none";
-    document.getElementById("item2").style.border = "none";
-    document.getElementById("item3").style.border = "none";
-    document.getElementById("item4").style.border = "none";
-    document.getElementById("item5").style.border = "none";
-   }
-}
-</script>
-
   </body>
 </html>
