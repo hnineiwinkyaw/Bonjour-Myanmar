@@ -36,13 +36,17 @@
       display: flex;
       justify-content: flex-end;
     }
+    .logo{
+      color:#fff;
+    }
+
     .nav li a{
       padding:0 5 5 5px;color:white;transition:0.2s;margin-left: 10px;border-radius: 50px
     }
     .navbar-brand{
       font-size:2.5em;color:white;margin-top:10px;transition:0.2s;
     }
-    .navbar{ height:80px; background: transparent;border:none;
+    .navbar{ height:80px; background: #4682B4;border:none;
 
     }
   
@@ -104,7 +108,7 @@
   </head>
   <body>
   <div>
-   <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -114,8 +118,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" onMouseOver="this.style.color='#0d212b'"style="color:white;"onMouseOut="this.style.color='#FFFFFF'">
-        <img src="bonjour.jpg" class="img" />
+      <a class="navbar-brand" href="index.html" onMouseOver="this.style.color='#0d212b'"style="color:white;" >
+        <span class="logo" id="logo">Bonjour Myanmar</span>
       </a>
     </div>
 
@@ -123,10 +127,15 @@
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="center">
          <ul class="nav navbar-nav navbar-right" >
-            <li><a id="item" class="item" href="#" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
-            <li><a id="item2" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Destination</a></li>
+            <li><a id="item" class="item" href="index.html" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
+            <li><a id="item2" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Burma Highlights</a></li>
             <li><a id="item3" href="tourProgram.html" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Tour Programs</a></li>
-            <li><a id="item5" href="#" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
+            <li><a id="item5" href="hotel.html" style="
+            background-color:#4682B4;
+            color:white;
+            border-color: #fff;
+            border:2px;
+            border-style: solid;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
             <li><a id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a></li>
             
           </ul>
@@ -204,30 +213,18 @@
 
 <script>
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function() {scrollFunction()};
+/*window.onscroll = function() {scrollFunction()};
  function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
    
     document.getElementById("nav").style.backgroundColor = "#4682B4";
-    document.getElementById("item").style.border = "2px";
-    document.getElementById("item").style.borderColor = "#fff";
-    document.getElementById("item").style.borderStyle = "solid";
-
-    document.getElementById("item2").style.border = "2px";
-    document.getElementById("item2").style.borderColor = "#fff";
-    document.getElementById("item2").style.borderStyle = "solid";
-
-    document.getElementById("item3").style.border = "2px";
-    document.getElementById("item3").style.borderColor = "#fff";
-    document.getElementById("item3").style.borderStyle = "solid";
-
-    document.getElementById("item4").style.border = "2px";
-    document.getElementById("item4").style.borderColor = "#fff";
-    document.getElementById("item4").style.borderStyle = "solid";
+    
 
     document.getElementById("item5").style.border = "2px";
     document.getElementById("item5").style.borderColor = "#fff";
     document.getElementById("item5").style.borderStyle = "solid";
+
+    document.getElementById("logo").style.color = "#fff";
    } else {
     document.getElementById("nav").style.background = "transparent";
     document.getElementById("item").style.border = "none";
@@ -236,7 +233,7 @@ window.onscroll = function() {scrollFunction()};
     document.getElementById("item4").style.border = "none";
     document.getElementById("item5").style.border = "none";
    }
-}
+}*/
 </script>
 
   </body>
