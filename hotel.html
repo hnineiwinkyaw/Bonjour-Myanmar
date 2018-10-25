@@ -23,9 +23,25 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-     .state{
-        float:right;margin-top: 90px; width:75%;margin-left:5px;height:500px;padding-top: 70px;
+    .seemore{
+      margin: 2%;
+    display: flex;
+    justify-content: center;
     }
+    .hotel-title{
+      margin-left: 20px;
+      color: #000080;
+      display: flex;
+      justify-content: center;
+    }
+     .state{
+    
+    margin-left: 0px;
+    float: right;
+    width: 80%;
+      display: block;
+    /* height: 500px; */
+    padding-top: 5%;    }
     html {
   scroll-behavior: smooth;
 }
@@ -43,13 +59,19 @@
       display: flex;
       justify-content: flex-end;
     }
+    .logo{
+      color:#fff;
+    }
+    .title{
+      margin-top: 0;background:#4682B4;color: white
+    }
     .nav li a{
       padding:0 5 5 5px;color:white;transition:0.2s;margin-left: 10px;border-radius: 50px
     }
     .navbar-brand{
       font-size:2.5em;color:white;margin-top:10px;transition:0.2s;
     }
-    .navbar{ height:80px; background: transparent;border:none;
+    .navbar{ height:80px; background: #4682B4;border:none;
 
     }
   
@@ -86,6 +108,7 @@
      .w3-button{
       font-size:1.1em;
     }
+
     .state h2{
     font-size:1.7em;
    }
@@ -119,17 +142,24 @@
    .state h2{
     font-size:1.5em;
    }
+<<<<<<< HEAD
    
     .sub-item-hotel,.sub-hotel{
       font-size:0.1px;
     }
+=======
+   .state{
+    padding-top: 18%
+   }
+    
+>>>>>>> ed79068fc4ffe7e88b09fdf3eecdf1890a2b42e1
 }
  
   </style>
   </head>
   <body>
   <div>
-   <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -139,8 +169,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" onMouseOver="this.style.color='#0d212b'"style="color:white;"onMouseOut="this.style.color='#FFFFFF'">
-        <img src="bonjour.jpg" class="img" />
+      <a class="navbar-brand" href="index.html" onMouseOver="this.style.color='#0d212b'"style="color:white;" >
+        <span class="logo" id="logo">Bonjour Myanmar</span>
       </a>
     </div>
 
@@ -148,10 +178,15 @@
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="center">
          <ul class="nav navbar-nav navbar-right" >
-            <li><a id="item" class="item" href="#" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
-            <li><a id="item2" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Destination</a></li>
+            <li><a id="item" class="item" href="index.html" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
+            <li><a id="item2" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Burma Highlights</a></li>
             <li><a id="item3" href="tourProgram.html" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Tour Programs</a></li>
-            <li><a id="item5" href="#" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
+            <li><a id="item5" href="hotel.html" style="
+            background-color:#4682B4;
+            color:white;
+            border-color: #fff;
+            border:2px;
+            border-style: solid;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
             <li><a id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a></li>
             
           </ul>
@@ -163,7 +198,7 @@
 </nav>
 <main>
       <div class="w3-sidebar w3-bar-block w3-card" style="width:20%;left:0;margin-top:90px;">
-  <h3 class="w3-bar-item">Popular</h3>
+  <h3 class="w3-bar-item title" >Popular</h3>
   <a href="#npt" class="w3-bar-item w3-button">Nay Pyi Taw</a>
   <a href="#ygn" class="w3-bar-item w3-button">Yangon</a>
   <a href="#mdy" class="w3-bar-item w3-button">Mandalay</a>
@@ -171,145 +206,189 @@
   <a href="#tg" class="w3-bar-item w3-button">Taung Gyi</a>
   <a href="#ngp" class="w3-bar-item w3-button">Ngapali</a>
   <a href="#ct" class="w3-bar-item w3-button">Chaung-Thar</a>
-  <h3 class="w3-bar-item">Others</h3>
+  <h3 class="w3-bar-item title">Others</h3>
 </div>
+<<<<<<< HEAD
 <div class="w3-container state"id="npt">
     <h2>Nay Pyi Taw</h2>
-    <div class="sub-hotel">
-      <img src="https://images.trvl-media.com/hotels/10000000/9150000/9141400/9141305/48d59cac_z.jpg" alt="Image" style="width:100%;height:150px;"><br>
-      <table>
-        <tr>
-            <td class="fa fa-building-o sub-item-hotel" ></td>
-            <td class="sub-item-hotel"> Kempinski Hotel Nay Pyi Taw</td>
-        </tr>
-        <tr>
-           <td class="fa fa-wifi sub-item-hotel"></td>
-           <td class="sub-item-hotel"> Wifi</td>
-        <tr>
-            <td class="  fa fa-car sub-item-hotel"></td>
-            <td  class="sub-item-hotel"> Parking</td>
-        </tr>
-        <tr>
-            <td class="  fa fa-cutlery sub-item-hotel" > </td>
-           <td  class="sub-item-hotel"> Restaurent</td>
-        </tr>
-        <tr>    
-            <td class="int-swim sub-item-hotel"> </td>
-            <td  class="sub-item-hotel"> Pool</td>
-        </tr>
-    </table>
-        <p>This family-friendly hotel is located in the city center, within 2 mi (3 km) of Shwe Se Khone Pagoda and Yanaungmyin Pagoda. Yan Aung Myin Golf Course is 2.2 mi (3.6 km) away.</p>
-      </div>
-       <div class="sub-hotel">
-      <img src="https://images.trvl-media.com/hotels/10000000/9150000/9141400/9141305/48d59cac_z.jpg" alt="Image" style="width:100%;height:150px;"><br>
-      <table>
-        <tr>
-            <td class="fa fa-building-o sub-item-hotel" ></td>
-            <td class="sub-item-hotel"> Kempinski Hotel Nay Pyi Taw</td>
-        </tr>
-        <tr>
-           <td class="fa fa-wifi sub-item-hotel"></td>
-           <td class="sub-item-hotel"> Wifi</td>
-        <tr>
-            <td class="  fa fa-car sub-item-hotel"></td>
-            <td  class="sub-item-hotel"> Parking</td>
-        </tr>
-        <tr>
-            <td class="  fa fa-cutlery sub-item-hotel" > </td>
-           <td  class="sub-item-hotel"> Restaurent</td>
-        </tr>
-        <tr>    
-            <td class="int-swim sub-item-hotel"> </td>
-            <td  class="sub-item-hotel"> Pool</td>
-        </tr>
-    </table>
-        <p>This family-friendly hotel is located in the city center, within 2 mi (3 km) of Shwe Se Khone Pagoda and Yanaungmyin Pagoda. Yan Aung Myin Golf Course is 2.2 mi (3.6 km) away.</p>
-      </div>
-       <div class="sub-hotel">
-      <img src="https://images.trvl-media.com/hotels/10000000/9150000/9141400/9141305/48d59cac_z.jpg" alt="Image" style="width:100%;height:150px;"><br>
-      <table>
-        <tr>
-            <td class="fa fa-building-o sub-item-hotel" ></td>
-            <td class="sub-item-hotel"> Kempinski Hotel Nay Pyi Taw</td>
-        </tr>
-        <tr>
-           <td class="fa fa-wifi sub-item-hotel"></td>
-           <td class="sub-item-hotel"> Wifi</td>
-        <tr>
-            <td class="  fa fa-car sub-item-hotel"></td>
-            <td  class="sub-item-hotel"> Parking</td>
-        </tr>
-        <tr>
-            <td class="  fa fa-cutlery sub-item-hotel" > </td>
-           <td  class="sub-item-hotel"> Restaurent</td>
-        </tr>
-        <tr>    
-            <td class="int-swim sub-item-hotel"> </td>
-            <td  class="sub-item-hotel"> Pool</td>
-        </tr>
-    </table>
-        <p>This family-friendly hotel is located in the city center, within 2 mi (3 km) of Shwe Se Khone Pagoda and Yanaungmyin Pagoda. Yan Aung Myin Golf Course is 2.2 mi (3.6 km) away.</p>
-      </div>
+   
+      
+
   </div>
   <div class="w3-container state" id="ygn" >
-    <h2>Yangon</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Yangon</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="w3-container state"id="mdy">
-    <h2>Mandalay</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Mandalay</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="w3-container state"id="pol">
-    <h2>Pyin Oo Lwin</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Pyin Oo Lwin</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="w3-container state"id="tg">
-    <h2>Taung Gyi</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Taung Gyi</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="w3-container state"id="ngp">
-    <h2>Nagpali</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Ngapali</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
-  <div class="w3-container state"id="ct">
-    <h2>Chaung Thar</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+  <div class="w3-container state"id="ct" style="margin-bottom: 5%">
+    <div class="hotel-title"><h2>Chaung Tha</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
+    
   </div>
      
     </main>
@@ -320,30 +399,18 @@
 
 <script>
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function() {scrollFunction()};
+/*window.onscroll = function() {scrollFunction()};
  function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
    
     document.getElementById("nav").style.backgroundColor = "#4682B4";
-    document.getElementById("item").style.border = "2px";
-    document.getElementById("item").style.borderColor = "#fff";
-    document.getElementById("item").style.borderStyle = "solid";
-
-    document.getElementById("item2").style.border = "2px";
-    document.getElementById("item2").style.borderColor = "#fff";
-    document.getElementById("item2").style.borderStyle = "solid";
-
-    document.getElementById("item3").style.border = "2px";
-    document.getElementById("item3").style.borderColor = "#fff";
-    document.getElementById("item3").style.borderStyle = "solid";
-
-    document.getElementById("item4").style.border = "2px";
-    document.getElementById("item4").style.borderColor = "#fff";
-    document.getElementById("item4").style.borderStyle = "solid";
+    
 
     document.getElementById("item5").style.border = "2px";
     document.getElementById("item5").style.borderColor = "#fff";
     document.getElementById("item5").style.borderStyle = "solid";
+
+    document.getElementById("logo").style.color = "#fff";
    } else {
     document.getElementById("nav").style.background = "transparent";
     document.getElementById("item").style.border = "none";
@@ -352,7 +419,7 @@ window.onscroll = function() {scrollFunction()};
     document.getElementById("item4").style.border = "none";
     document.getElementById("item5").style.border = "none";
    }
-}
+}*/
 </script>
 
   </body>

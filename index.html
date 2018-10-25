@@ -21,6 +21,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+       
+    .logo {
+      font-family: cursive;
+    }
     .sky-gradient-12 { background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%); }
     .sky-gradient-10 { background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%); }
     .sky-gradient-11 { background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%); }
@@ -110,8 +114,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" onMouseOver="this.style.color='#0d212b'"style="color:white;"onMouseOut="this.style.color='#FFFFFF'">
-        <img src="bonjour.jpg" class="img" />
+      <a class="navbar-brand" href="index.html" onMouseOver="this.style.color='#0d212b'"style="color:white;"onMouseOut="this.style.color='#FFFFFF'">
+        <span class="logo">Bonjour Myanmar</span>
       </a>
     </div>
 
@@ -119,10 +123,10 @@
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="center">
          <ul class="nav navbar-nav navbar-right" >
-            <li><a id="item" class="item" href="#" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
-            <li><a id="item2" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Destination</a></li>
+            <li><a id="item" class="item" href="index.html" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
+            <li><a id="item2" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Burma Highlights</a></li>
             <li><a id="item3" href="tourProgram.html" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Tour Programs</a></li>
-            <li><a id="item5" href="#" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
+            <li><a id="item5" href="hotel.html" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
             <li><a id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a></li>
             
           </ul>
@@ -189,21 +193,27 @@
           </div>
         </div>
         <div class = "divi"  >
-          <h1 class="h1">Destinations</h1>
+          <h1 class="h1" style="color: #000080;">Tour Styles</h1>
           <div class="row-container">
             <div class="sub-items">
-
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
             </div>
             <div class="sub-items">
-
-            </div>
-            <div class="sub-items">
-
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
             </div>
           </div>
         </div>
         <div class = "divi"  >
-          <h1 class="h1">Packages</h1>
+          <h1 class="h1" style="color: #000080;">Tour Packages</h1>
           <div class="row-container">
             <div class="sub-items">
 
@@ -244,7 +254,7 @@ window.onscroll = function() {scrollFunction()};
     document.getElementById("item").style.borderColor = "#fff";
     document.getElementById("item").style.borderStyle = "solid";
 
-    document.getElementById("item2").style.border = "2px";
+    /*document.getElementById("item2").style.border = "2px";
     document.getElementById("item2").style.borderColor = "#fff";
     document.getElementById("item2").style.borderStyle = "solid";
 
@@ -258,7 +268,7 @@ window.onscroll = function() {scrollFunction()};
 
     document.getElementById("item5").style.border = "2px";
     document.getElementById("item5").style.borderColor = "#fff";
-    document.getElementById("item5").style.borderStyle = "solid";
+    document.getElementById("item5").style.borderStyle = "solid";*/
    } else {
     document.getElementById("nav").style.background = "transparent";
     document.getElementById("item").style.border = "none";
