@@ -8,6 +8,8 @@
     <title>Bonjour Myanmar</title>
 
     <!-- Bootstrap -->
+    <script src="https://smtpjs.com/v2/smtp.js">
+</script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -39,7 +41,19 @@
             todayHighlight: true,
             autoclose: true,
         })
+
+        $('#bt1').click(function() {
+        /*$('#fr1').attr('action',
+                       'mailto:hnineiwinkyaw.ycc@gmail.com?subject=' +
+                       $('#tb1').val() + '&body=' + $('#tb2').val());*/
+        $('#fr1').attr('action',
+                       'mailto:hnineiwinkyaw.ycc@gmail.com?subject=hired&body=Congrats');
+        $('#fr1').submit();
+    });
+
+        
     })
+
 </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -170,7 +184,7 @@
 <main>
       <div class="container2">
         <div class="boxshadow">
- 
+
           <div id="myCarousel" class="carousel slide" data-ride="carousel" style="-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
               -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
               box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -248,6 +262,8 @@
           <div class="row-container">
             <div class="sub-items">
 
+          <br>
+          <br>
             </div>
             <div class="sub-items">
 
@@ -321,45 +337,83 @@ window.onscroll = function() {scrollFunction()};
         <h4 class="modal-title" id="exampleModalLabel">Enquiry Form</h4>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="fr1">
 
           <div style="display: flex;">
           <div class="form-group" style="margin-right: 4%; width: 48%">
-            <label for="recipient-name" class="control-label">First Name:</label>
-            <input type="text" style="width: 100%" class="form-control" id="recipient-name">
+            <label for="first-name" class="control-label">First Name:</label>
+            <input type="text" style="width: 100%" name="first-name" class="form-control" id="first-name">
           </div>
           <div class="form-group" style="width: 48%">
-            <label for="recipient-name" class="control-label">Last Name:</label>
-            <input type="text" class="form-control" id="recipient-name" style="width: 100%">
+            <label for="last-name" class="control-label">Last Name:</label>
+            <input type="text" class="form-control" name="last-name" id="last-name" style="width: 100%">
           </div>
         </div>
 
           <div class="form-group">
-            <label for="recipient-name" class="control-label">Email:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="email" class="control-label">Email:</label>
+            <input type="email"  name="email" class="form-control" id="recipient-name">
           </div>
 
           <div style="display: flex;">
           <div class="form-group" style="margin-right: 4%; width: 48%"> <!-- Date input -->
-            <label class="control-label" for="date">Estimate Arrival Date</label>
-            <input class="form-control" id="date" name="a_date" placeholder="MM/DD/YYY" type="text"/>
+            <label class="control-label" for="a_date">Estimate Arrival Date</label>
+            <input class="form-control" id="adate" name="a_date" placeholder="MM/DD/YYY" type="text"/>
           </div>
           <div class="form-group" style="width: 48%">
-            <label class="control-label" for="date">Estimate Departure Date</label>
-            <input class="form-control" id="date" name="d_date" placeholder="MM/DD/YYY" type="text"/>
+            <label class="control-label" for="d_date">Estimate Departure Date</label>
+            <input class="form-control" id="ddate" name="d_date" placeholder="MM/DD/YYY" type="text"/>
           </div>
         </div>
+
+        <div style="display: flex;">
+          <div class="form-group" style="margin-right: 5%; width: 30%"> <!-- Date input -->
+            <label class="control-label" for="adults">Adults</label>
+            <input class="form-control" id="adults" name="adults" type="number" min="0"/>
+          </div>
+          <div class="form-group" style="margin-right: 5%;width: 30%">
+            <label class="control-label" for="children">Children</label>
+            <input class="form-control" name="children" id="children" type="number" min="0"/>
+          </div>
+          <div class="form-group" style="width: 30%">
+            <label class="control-label" for="infants">Infants</label>
+            <input class="form-control" id="infants" name="infants" type="number" min="0"/>
+          </div>
+        </div>
+
           <div class="form-group">
             <label for="message-text" class="control-label">Plans or Ideas:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" rows="5" name="message-text" id="message-text"></textarea>
           </div>
-        </form>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-primary" onclick="sendMail(); return false">Submit
+          <script type="text/javascript">
+            function sendMail() {
+            /*var link = "mailto:hnineiwinkyaw.ycc@gmail.com"
+                     + "&subject=" + escape("This is my subject")
+                     + "&body=" + escape("ngar par")
+            ;
+
+            window.location.href = link;*/
+            Email.send("genius.tpmhe@gmail.com",
+              "hnineiwinkyaw.ycc@gmail.com",
+              "This is a subject",
+              "this is the body",
+              "smtp.yourisp.com",
+              "hnineiwinkyaw.ycc@gmail.com",
+              "tpmHEWK_18");
+            alert("done");
+        }
+          </script>
+        </button>
+
       </div>
+      </form>
     </div>
   </div>
 </div>
 </html>
+
