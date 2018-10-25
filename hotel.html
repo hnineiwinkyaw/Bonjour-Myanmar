@@ -8,6 +8,7 @@
     <title>Bonjour Myanmar</title>
 
     <!-- Bootstrap -->
+
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,6 +23,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+     .state{
+        float:right;margin-top: 90px; width:75%;margin-left:5px;height:500px;padding-top: 70px;
+    }
+    html {
+  scroll-behavior: smooth;
+}
     .sky-gradient-12 { background: linear-gradient(to bottom, #90dffe 0%,#38a3d1 100%); }
     .sky-gradient-10 { background: linear-gradient(to bottom, #b7eaff 0%,#94dfff 100%); }
     .sky-gradient-11 { background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%); }
@@ -77,6 +84,15 @@
   .nav li a{
       padding:5px;color:white;transition:0.2s;
     }
+     .w3-bar-item{
+      font-size:1.5em;
+    }
+     .w3-button{
+      font-size:1.1em;
+    }
+    .state h2{
+    font-size:1.7em;
+   }
 }
   @media screen and (max-width: 700px) {
   .navbar-brand{
@@ -98,12 +114,18 @@
        padding-top: 0px;
       display: block;
     }
-   
+     .w3-bar-item{
+      font-size:1em;
+    }
+    .w3-button{
+      font-size:0.8em;
+    }
+   .state h2{
+    font-size:1.5em;
+   }
     
 }
-  .state{
-        float:right;margin-top: 90px; width:75%;margin-left:5px;height:500px;padding-top: 70px;
-    }
+ 
   </style>
   </head>
   <body>
@@ -159,31 +181,7 @@
 </div>
 <div class="w3-container state"id="npt">
     <h2>Nay Pyi Taw</h2>
-    <div class="card-group">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+    
 </div>
   </div>
   <div class="w3-container state" id="ygn" >
