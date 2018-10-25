@@ -23,9 +23,25 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-     .state{
-        float:right;margin-top: 90px; width:75%;margin-left:5px;height:500px;padding-top: 70px;
+    .seemore{
+      margin: 2%;
+    display: flex;
+    justify-content: center;
     }
+    .hotel-title{
+      margin-left: 20px;
+      color: #000080;
+      display: flex;
+      justify-content: center;
+    }
+     .state{
+    
+    margin-left: 0px;
+    float: right;
+    width: 80%;
+      display: block;
+    /* height: 500px; */
+    padding-top: 5%;    }
     html {
   scroll-behavior: smooth;
 }
@@ -46,7 +62,9 @@
     .logo{
       color:#fff;
     }
-
+    .title{
+      margin-top: 0;background:#4682B4;color: white
+    }
     .nav li a{
       padding:0 5 5 5px;color:white;transition:0.2s;margin-left: 10px;border-radius: 50px
     }
@@ -90,6 +108,7 @@
      .w3-button{
       font-size:1.1em;
     }
+
     .state h2{
     font-size:1.7em;
    }
@@ -122,6 +141,9 @@
     }
    .state h2{
     font-size:1.5em;
+   }
+   .state{
+    padding-top: 18%
    }
     
 }
@@ -169,7 +191,7 @@
 </nav>
 <main>
       <div class="w3-sidebar w3-bar-block w3-card" style="width:20%;left:0;margin-top:90px;">
-  <h3 class="w3-bar-item">Popular</h3>
+  <h3 class="w3-bar-item title" >Popular</h3>
   <a href="#npt" class="w3-bar-item w3-button">Nay Pyi Taw</a>
   <a href="#ygn" class="w3-bar-item w3-button">Yangon</a>
   <a href="#mdy" class="w3-bar-item w3-button">Mandalay</a>
@@ -177,99 +199,212 @@
   <a href="#tg" class="w3-bar-item w3-button">Taung Gyi</a>
   <a href="#ngp" class="w3-bar-item w3-button">Ngapali</a>
   <a href="#ct" class="w3-bar-item w3-button">Chaung-Thar</a>
-  <h3 class="w3-bar-item">Others</h3>
+  <h3 class="w3-bar-item title">Others</h3>
 </div>
-<div class="w3-container state"id="npt">
-    <h2>Nay Pyi Taw</h2>
-    <div class="sub-hotel">
-      <img src="https://images.trvl-media.com/hotels/10000000/9150000/9141400/9141305/48d59cac_z.jpg" alt="Image" style="width:100%;height:150px;"><br>
-      <table>
-        <tr>
-            <td class="fa fa-building-o sub-item-hotel" ></td>
-            <td class="sub-item-hotel"> Kempinski Hotel Nay Pyi Taw</td>
-        </tr>
-        <tr>
-           <td class="fa fa-wifi sub-item-hotel"></td>
-           <td class="sub-item-hotel"> Wifi</td>
-        <tr>
-            <td class="  fa fa-car sub-item-hotel"></td>
-            <td  class="sub-item-hotel"> Parking</td>
-        </tr>
-        <tr>
-            <td class="  fa fa-cutlery sub-item-hotel" > </td>
-           <td  class="sub-item-hotel"> Restaurent</td>
-        </tr>
-        <tr>    
-            <td class="int-swim sub-item-hotel"> </td>
-            <td  class="sub-item-hotel"> Pool</td>
-        </tr>
-    </table>
-    <p>This family-friendly hotel is located in the city center, within 2 mi (3 km) of Shwe Se Khone Pagoda and Yanaungmyin Pagoda. Yan Aung Myin Golf Course is 2.2 mi (3.6 km) away.</p>
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+<div class="w3-container state"id="npt" style="padding-top:5%;margin-top: 5% ">
+    <div class="hotel-title"><h2>Nay Pyi Taw</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      
   </div>
   <div class="w3-container state" id="ygn" >
-    <h2>Yangon</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Yangon</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="w3-container state"id="mdy">
-    <h2>Mandalay</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Mandalay</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="w3-container state"id="pol">
-    <h2>Pyin Oo Lwin</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Pyin Oo Lwin</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="w3-container state"id="tg">
-    <h2>Taung Gyi</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Taung Gyi</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
   <div class="w3-container state"id="ngp">
-    <h2>Nagpali</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+    <div class="hotel-title"><h2>Ngapali</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
   </div>
-  <div class="w3-container state"id="ct">
-    <h2>Chaung Thar</h2>
-    <div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div><div class="sub-hotel">
-      <img src="trust.png" alt="Image" style="width:100%;height:150px;border:1px solid red;">
-    </div>
+  <div class="w3-container state"id="ct" style="margin-bottom: 5%">
+    <div class="hotel-title"><h2>Chaung Tha</h2></div>
+    <div class = "divi" style="margin-top: 0" >
+          
+          <div class="row-container">
+            <div class="sub-items">
+            <a style="cursor: pointer;">
+              <img src="chin2.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+          </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;" >
+              <img src="palace.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+            <div class="sub-items">
+              <a style="cursor: pointer;">
+              <img src="mandalay.jpg" class="imgsub">
+            </a>
+            <div class="seemore"> <button class="btn btn-info">See more</button>
+            </div>
+            </div>
+          </div>
+        </div>
+    
   </div>
      
     </main>
