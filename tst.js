@@ -4,6 +4,7 @@ var templateParams = {
 };
 
 function sendMail(){
+	$('#loadingModal').modal('hide');
 emailjs.send('hnin_ei','template_YmHG8l1Z', templateParams)
 	.then(function(response) {
 	   console.log('SUCCESS!', response.status, response.text);

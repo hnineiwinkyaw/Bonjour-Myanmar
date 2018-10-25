@@ -3,6 +3,28 @@
 <head>
 <meta charset="utf-8">
 <title>Daily Report</title>
+<style>
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
 <script type="text/javascript">
    (function(){
@@ -22,5 +44,12 @@
         <input type="submit" value="Email">
     </fieldset>
 </form>
+<div class="modal fade" id="loadingModal" role="dialog">
+	<div class="modal-dialog modal-dialog-loader">
+		<div class="loader"></div>
+	</div>
+</div>
+
+
 </body>
 </html>
