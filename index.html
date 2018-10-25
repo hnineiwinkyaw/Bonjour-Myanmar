@@ -22,11 +22,20 @@
 
 <script>
     $(document).ready(function(){
-        var date_input=$('input[name="date"]'); //our date input has the name "date"
+        var date_input=$('input[name="a_date"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         date_input.datepicker({
             format: 'mm/dd/yyyy',
             container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+
+         var date_input2=$('input[name="d_date"]'); //our date input has the name "date"
+        var container2=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input2.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container2,
             todayHighlight: true,
             autoclose: true,
         })
@@ -324,11 +333,17 @@ window.onscroll = function() {scrollFunction()};
             <label for="recipient-name" class="control-label">Email:</label>
             <input type="text" class="form-control" id="recipient-name">
           </div>
-          <div class="form-group"> <!-- Date input -->
-            <label class="control-label" for="date">Date</label>
-            <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
-          </div>
 
+          <div style="display: flex;">
+          <div class="form-group" style="margin-right: 4%; width: 48%"> <!-- Date input -->
+            <label class="control-label" for="date">Arrival Date</label>
+            <input class="form-control" id="date" name="a_date" placeholder="MM/DD/YYY" type="text"/>
+          </div>
+          <div class="form-group" style="width: 48%">
+            <label class="control-label" for="date">Departure Date</label>
+            <input class="form-control" id="date" name="d_date" placeholder="MM/DD/YYY" type="text"/>
+          </div>
+        </div>
           <div class="form-group">
             <label for="message-text" class="control-label">Plans or Ideas:</label>
             <textarea class="form-control" id="message-text"></textarea>
