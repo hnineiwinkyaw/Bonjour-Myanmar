@@ -13,17 +13,46 @@ $(document).ready(function() {
       show: true //Display loader!
     });
     var templateParams = {
-	    message_html: 'James',
+
+    	first_name: document.getElementById("first-name").value,
+    	last_name : document.getElementById("last-name").value,
+    	email: document.getElementById("email").value,
+    	a_date: document.getElementById("adate").value,
+    	d_date: document.getElementById("ddate").value,
+    	adults: document.getElementById("adults").value,
+    	children: document.getElementById("children").value,
+    	infants: document.getElementById("infants").value,
+    	plans: document.getElementById("message-text").value,
+
 	};
     emailjs.send('geniusHE','template_YmHG8l1Z', templateParams)
 	.then(function(response) {
 	   console.log('SUCCESS!', response.status, response.text);
 	   $("#loadMe").modal("hide");
-	   alert("SUCCESS");
+		document.getElementById("first-name").value = '';
+    	document.getElementById("last-name").value = '';
+    	document.getElementById("email").value = '';
+    	document.getElementById("adate").value = '';
+    	document.getElementById("ddate").value = '';
+    	document.getElementById("adults").value = '';
+    	document.getElementById("children").value = '';
+    	document.getElementById("infants").value = '';
+    	document.getElementById("message-text").value = '';
+	    swal("Success!", "Your enquiry form has been submitted!", "success");
+
 	}, function(err) {
 	   console.log('FAILED...', err);
 	   $("#loadMe").modal("hide");
-	   alert("FAILED");
+	   document.getElementById("first-name").value = '';
+    	document.getElementById("last-name").value = '';
+    	document.getElementById("email").value = '';
+    	document.getElementById("adate").value = '';
+    	document.getElementById("ddate").value = '';
+    	document.getElementById("adults").value = '';
+    	document.getElementById("children").value = '';
+    	document.getElementById("infants").value = '';
+    	document.getElementById("message-text").value = '';
+	   swal("Failed!", "Your enquiry has been failed! Check your connection or contact us via email directly", "success");
 	});
     //setTimeout(function() {
       //$("#loadMe").modal("hide");
