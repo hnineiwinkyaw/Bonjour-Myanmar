@@ -8,17 +8,18 @@
     <title>Bonjour Myanmar</title>
 
     <!-- Bootstrap -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href= "index.css" type="text/css" rel = "stylesheet">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="random.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -279,9 +280,27 @@
               <a style="cursor: pointer;" >
               <img src="palace.jpg" class="imgsub">
             </a>
+
             <div class="seemore"> <button class="btn btn-info">See more</button>
             </div>
             </div>
+
+<div>
+            <a id="modalPopper" class="btn">Popup Modal Message</a>
+    <div id="msgModal" class="modal hide fade">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3></h3>
+      </div>
+      <div class="modal-body">
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary callback-btn" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+</div>
+
+
             <div class="sub-items">
               <a style="cursor: pointer;">
               <img src="mandalay.jpg" class="imgsub">
