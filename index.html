@@ -24,6 +24,7 @@
 
 <script>
     $(document).ready(function(){
+      $('#loadingModal').modal('show');
         var date_input=$('input[name="a_date"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         date_input.datepicker({
@@ -392,20 +393,22 @@ window.onscroll = function() {scrollFunction()};
         <button type="button" class="btn btn-primary" onclick="sendMail(); return false">Submit
           <script type="text/javascript">
             function sendMail() {
+              //alert("hi");
+              $('#loadingModal').modal('show');
             /*var link = "mailto:hnineiwinkyaw.ycc@gmail.com"
                      + "&subject=" + escape("This is my subject")
                      + "&body=" + escape("ngar par")
             ;
 
             window.location.href = link;*/
-            Email.send("genius.tpmhe@gmail.com",
+            /*Email.send("genius.tpmhe@gmail.com",
               "hnineiwinkyaw.ycc@gmail.com",
               "This is a subject",
               "this is the body",
               "smtp.yourisp.com",
               "hnineiwinkyaw.ycc@gmail.com",
               "tpmHEWK_18");
-            alert("done");
+            alert("done");*/
         }
           </script>
         </button>
@@ -413,6 +416,12 @@ window.onscroll = function() {scrollFunction()};
       </div>
       </form>
     </div>
+  </div>
+</div>
+<div class="modal fade" id="loadingModal" role="dialog">
+  <div class="modal-dialog modal-dialog-loader">
+
+    
   </div>
 </div>
 </html>
