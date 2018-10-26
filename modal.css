@@ -1,28 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
-body {
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
-  background: #333;
-  font-family: 'Roboto', sans-serif !important;
-  font-size: 1em;
-}
-h1{
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
-  color: #999;
-  font-weight: 300;
-  margin-bottom: 55px;
-  margin-top: 45px;
-  text-transform: uppercase;
-}
-h1 small{
-  display: block;
-  font-size: 18px;
-  text-transform: none;
-  letter-spacing: 1.5px;
-  margin-top: 12px;
-}
+
 .row{
   max-width: 950px;
   margin: 0 auto;
@@ -84,10 +61,7 @@ h1 small{
 
 /** MODAL STYLING **/
 
-.modal-content {
-  border-radius: 0px;
-  box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.7);
-}
+
 
 .modal-backdrop.show {
   opacity: 0.75;
@@ -116,17 +90,5 @@ h1 small{
     font-style: italic;
     font-family: 'Roboto', sans-serif !important;
   }
-  h4 {
-    font-weight: 300 !important;
-    font-size: 1.1em;
-    font-family: 'Roboto', sans-serif !important;
-  }
-  p {
-    font-family: 'Roboto', sans-serif !important;
-    font-size: 0.9em;
-    b {
-      text-transform: uppercase;
-      text-decoration: underline;
-    }
-  }
+ 
 }

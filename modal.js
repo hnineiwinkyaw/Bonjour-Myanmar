@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("#just_load_please").on("click", function(e) {
+  	$("#exampleModal").modal("hide");
   	console.log("hi");
     e.preventDefault();
     $("#loadMe").modal({
@@ -7,9 +8,9 @@ $(document).ready(function() {
       keyboard: false, //remove option to close with keyboard
       show: true //Display loader!
     });
-    setTimeout(function() {
-      $("#loadMe").modal("hide");
-    }, 3500);
+    //setTimeout(function() {
+      //$("#loadMe").modal("hide");
+    //}, 8000);
   });
   //ajax code here (example for $.post) using test page from https://reqres.in
   //Adding a delay so we can see the functionality of the loader while request processes

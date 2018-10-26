@@ -10,17 +10,24 @@
     <!-- Bootstrap -->
     <script src="https://smtpjs.com/v2/smtp.js">
 </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href= "index.css" type="text/css" rel = "stylesheet">
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript" src="modal.js"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link href= "index.css" type="text/css" rel = "stylesheet">
+
+<link href= "modal.css" type="text/css" rel = "stylesheet">
+
+
 
 <script>
     $(document).ready(function(){
@@ -86,7 +93,7 @@
       font-size:2.5em;color:white;margin-top:10px;transition:0.2s;
     }
     .navbar{ height:80px; background: transparent;border:none;
-
+      z-index: 2;
     }
     .center{
       padding-top: 10px;
@@ -390,27 +397,9 @@ window.onscroll = function() {scrollFunction()};
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="sendMail(); return false">Submit
-          <script type="text/javascript">
-            function sendMail() {
-              //alert("hi");
-              $('#loadingModal').modal('show');
-            /*var link = "mailto:hnineiwinkyaw.ycc@gmail.com"
-                     + "&subject=" + escape("This is my subject")
-                     + "&body=" + escape("ngar par")
-            ;
-
-            window.location.href = link;*/
-            /*Email.send("genius.tpmhe@gmail.com",
-              "hnineiwinkyaw.ycc@gmail.com",
-              "This is a subject",
-              "this is the body",
-              "smtp.yourisp.com",
-              "hnineiwinkyaw.ycc@gmail.com",
-              "tpmHEWK_18");
-            alert("done");*/
-        }
-          </script>
+       
+        <button type="button" id="just_load_please" class="btn btn-primary" >Submit
+          
         </button>
 
       </div>
@@ -418,10 +407,16 @@ window.onscroll = function() {scrollFunction()};
     </div>
   </div>
 </div>
-<div class="modal fade" id="loadingModal" role="dialog">
-  <div class="modal-dialog modal-dialog-loader">
-
-    
+<div class="modal fade" id="loadMe" tabindex="-1" style="z-index: 1023;" role="dialog" aria-labelledby="loadMeLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content" style="top:200px">
+      <div class="modal-body text-center">
+        <div class="loader"></div>
+        <div clas="loader-txt">
+          <p>Send Information to Bonjour Myanmar... Please wait ...</small></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </html>
