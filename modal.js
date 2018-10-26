@@ -1,5 +1,9 @@
+
+
+
 $(document).ready(function() {
   $("#just_load_please").on("click", function(e) {
+
   	$("#exampleModal").modal("hide");
   	console.log("hi");
     e.preventDefault();
@@ -8,6 +12,19 @@ $(document).ready(function() {
       keyboard: false, //remove option to close with keyboard
       show: true //Display loader!
     });
+    var templateParams = {
+	    message_html: 'James',
+	};
+    emailjs.send('geniusHE','template_YmHG8l1Z', templateParams)
+	.then(function(response) {
+	   console.log('SUCCESS!', response.status, response.text);
+	   $("#loadMe").modal("hide");
+	   alert("SUCCESS");
+	}, function(err) {
+	   console.log('FAILED...', err);
+	   $("#loadMe").modal("hide");
+	   alert("FAILED");
+	});
     //setTimeout(function() {
       //$("#loadMe").modal("hide");
     //}, 8000);
