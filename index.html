@@ -8,20 +8,40 @@
     <title>Bonjour Myanmar</title>
 
     <!-- Bootstrap -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href= "index.css" type="text/css" rel = "stylesheet">
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://smtpjs.com/v2/smtp.js">
+</script>
 
-<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript" src="modal.js"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_gDGbLymYDnzCXBAGqjxGK");
+   })();
+</script>
+
+<link href= "index.css" type="text/css" rel = "stylesheet">
+
+<link href= "modal.css" type="text/css" rel = "stylesheet">
+
+
 
 <script>
     $(document).ready(function(){
+      $('#loadingModal').modal('show');
         var date_input=$('input[name="a_date"]'); //our date input has the name "date"
         var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
         date_input.datepicker({
@@ -39,7 +59,19 @@
             todayHighlight: true,
             autoclose: true,
         })
+
+        $('#bt1').click(function() {
+        /*$('#fr1').attr('action',
+                       'mailto:hnineiwinkyaw.ycc@gmail.com?subject=' +
+                       $('#tb1').val() + '&body=' + $('#tb2').val());*/
+        $('#fr1').attr('action',
+                       'mailto:hnineiwinkyaw.ycc@gmail.com?subject=hired&body=Congrats');
+        $('#fr1').submit();
+    });
+
+        
     })
+
 </script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -71,7 +103,7 @@
       font-size:2.5em;color:white;margin-top:10px;transition:0.2s;
     }
     .navbar{ height:80px; background: transparent;border:none;
-
+      z-index: 2;
     }
     .center{
       padding-top: 10px;
@@ -170,7 +202,7 @@
 <main>
       <div class="container2">
         <div class="boxshadow">
- 
+
           <div id="myCarousel" class="carousel slide" data-ride="carousel" style="-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
               -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
               box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -248,6 +280,8 @@
           <div class="row-container">
             <div class="sub-items">
 
+          <br>
+          <br>
             </div>
             <div class="sub-items">
 
@@ -321,45 +355,79 @@ window.onscroll = function() {scrollFunction()};
         <h4 class="modal-title" id="exampleModalLabel">Enquiry Form</h4>
       </div>
       <div class="modal-body">
-        <form>
+        <form id="fr1">
 
           <div style="display: flex;">
           <div class="form-group" style="margin-right: 4%; width: 48%">
-            <label for="recipient-name" class="control-label">First Name:</label>
-            <input type="text" style="width: 100%" class="form-control" id="recipient-name">
+            <label for="first-name" class="control-label">First Name:</label>
+            <input type="text" style="width: 100%" name="first-name" class="form-control" id="first-name">
           </div>
           <div class="form-group" style="width: 48%">
-            <label for="recipient-name" class="control-label">Last Name:</label>
-            <input type="text" class="form-control" id="recipient-name" style="width: 100%">
+            <label for="last-name" class="control-label">Last Name:</label>
+            <input type="text" class="form-control" name="last-name" id="last-name" style="width: 100%">
           </div>
         </div>
 
           <div class="form-group">
-            <label for="recipient-name" class="control-label">Email:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label for="email" class="control-label">Email:</label>
+            <input type="email"  name="email" class="form-control" id="email">
           </div>
 
           <div style="display: flex;">
           <div class="form-group" style="margin-right: 4%; width: 48%"> <!-- Date input -->
-            <label class="control-label" for="date">Estimate Arrival Date</label>
-            <input class="form-control" id="date" name="a_date" placeholder="MM/DD/YYY" type="text"/>
+            <label class="control-label" for="a_date">Estimate Arrival Date</label>
+            <input class="form-control" id="adate" name="a_date" placeholder="MM/DD/YYY" type="text"/>
           </div>
           <div class="form-group" style="width: 48%">
-            <label class="control-label" for="date">Estimate Departure Date</label>
-            <input class="form-control" id="date" name="d_date" placeholder="MM/DD/YYY" type="text"/>
+            <label class="control-label" for="d_date">Estimate Departure Date</label>
+            <input class="form-control" id="ddate" name="d_date" placeholder="MM/DD/YYY" type="text"/>
           </div>
         </div>
+
+        <div style="display: flex;">
+          <div class="form-group" style="margin-right: 5%; width: 30%"> <!-- Date input -->
+            <label class="control-label" for="adults">Adults</label>
+            <input class="form-control" id="adults" name="adults" type="number" min="0"/>
+          </div>
+          <div class="form-group" style="margin-right: 5%;width: 30%">
+            <label class="control-label" for="children">Children</label>
+            <input class="form-control" name="children" id="children" type="number" min="0"/>
+          </div>
+          <div class="form-group" style="width: 30%">
+            <label class="control-label" for="infants">Infants</label>
+            <input class="form-control" id="infants" name="infants" type="number" min="0"/>
+          </div>
+        </div>
+
           <div class="form-group">
             <label for="message-text" class="control-label">Plans or Ideas:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" rows="5" name="message-text" id="message-text"></textarea>
           </div>
-        </form>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+       
+        <button type="button" id="just_load_please" class="btn btn-primary" >Submit
+          
+        </button>
+
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="loadMe" tabindex="-1" style="z-index: 1023;" role="dialog" aria-labelledby="loadMeLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content" style="top:200px">
+      <div class="modal-body text-center">
+        <div class="loader"></div>
+        <div clas="loader-txt">
+          <p>Send Information to Bonjour Myanmar... Please wait ...</small></p>
+        </div>
       </div>
     </div>
   </div>
 </div>
 </html>
+
