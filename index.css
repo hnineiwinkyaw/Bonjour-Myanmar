@@ -1,48 +1,23 @@
 body{
 	padding: 0px;
 	margin:0px;
-<<<<<<< HEAD
-}
-header{
-	width:93%;margin-left:1%;
-	z-index: 2;
-	font-style:italic;border-bottom:1px solid (0,0,0,0.5);
-	background-size:100%;position:fixed;
-	transition:0.4s;
-	}
-.header{
-	background-color:#b4bdc6;
-}
-=======
 }
 
 .header{
 	background-color:#b4bdc6;
 }
->>>>>>> e62970236c19dcf63523315b21ece529fea7cb2f
 .h1{
 	font-size:2.5em;margin:0;padding-top:10px;display:block;text-align:center;
 }
 .center{
 	justify-content: center;
 	display: flex;
-<<<<<<< HEAD
-}
-nav{
-	margin-left:30%;margin-top:-9%;padding:20px;
-=======
->>>>>>> e62970236c19dcf63523315b21ece529fea7cb2f
 }
 
 .container2{
 	margin-top:7%;
 	display: block;
 	margin: auto;
-}
-
-.container{
-	margin-top:10%;
-	display: block;
 }
 .divi{
 	width:98%;
@@ -81,13 +56,6 @@ h1{
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-<<<<<<< HEAD
-	height: 100%;
-	width: 300px;
-	margin-bottom: 5%;
-	margin-left: 2%;
-	margin-top: 2%
-=======
 	min-height: 200px;
 	height: auto;
 	width: 300px;
@@ -99,15 +67,11 @@ h1{
 .imgsub{
 	width: 100%;
 	height: 100%
->>>>>>> e62970236c19dcf63523315b21ece529fea7cb2f
 }
 .boxshadow{
 	border-style: solid;
 	border: 2px;
-<<<<<<< HEAD
-=======
 	width: 100%;
->>>>>>> e62970236c19dcf63523315b21ece529fea7cb2f
 }
 .bg{
   background-image:url(sky.jpg);
@@ -118,20 +82,13 @@ h1{
 .footer{
 	width: 100%;
 	height: 50px;
-<<<<<<< HEAD
-	background-color: gray;
-=======
 	background-color: #4682B4;
->>>>>>> e62970236c19dcf63523315b21ece529fea7cb2f
 	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	display: flex;
 	justify-content: flex-end;
 	color: #fff;
-<<<<<<< HEAD
-}
-=======
 }
 hr.style14 { 
 	padding: 0;
@@ -199,6 +156,58 @@ hr.style14 {
 }
 
 /* Modal Content */
+.modal-content {
+    position: fixed;
+    
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+
 .modal-content {
     position: fixed;
     
