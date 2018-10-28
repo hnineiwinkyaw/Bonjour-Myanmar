@@ -108,6 +108,13 @@ hr.style14 {
     height: auto;
     margin-left: 0%;
 }
+.sub-items{
+    height: 140px;
+    min-height: 140px;
+    }
+    .imgsub{
+        height: 140px;
+    }
  }
  .highlight{
  	width:100%;
