@@ -23,6 +23,34 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    .menubutton{
+      top: 84px;
+    /* padding-top: 10%; */
+    z-index: 1023;
+    position: fixed;
+    display: block;
+    }
+    .thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+    .w3-card::-webkit-scrollbar {
+    width: 2px;
+}
+    .popular{
+      padding-bottom: 0;
+      padding-top: 0;
+      margin-top: 10px;
+      margin-left: 30px;
+    }
     .seemore{
       margin: 2%;
     display: flex;
@@ -89,6 +117,14 @@
 
 }
  @media screen and (max-width: 1000.1px) {
+   .highlight{
+      height:300px;
+      font-size:14px;
+     }
+     .hig-img1{
+      width:40%;
+      height:150px;
+     }
   .navbar-brand{
     font-size:1em; /* The width is 100%, when the viewport is 800px or smaller */
   }
@@ -114,6 +150,14 @@
    }
 }
   @media screen and (max-width: 700px) {
+     .highlight{
+      height:300px;
+      font-size:7px;
+     }
+     .hig-img1{
+      width:35%;
+      height:80px;
+     }
   .navbar-brand{
     font-size:1.5em; /* The width is 100%, when the viewport is 800px or smaller */
   }
@@ -143,7 +187,8 @@
     font-size:1.5em;
    }
    .state{
-    padding-top: 18%
+    padding-top: 18%;
+    width: 100%;
    }
     
 }
@@ -172,10 +217,10 @@
       <div class="center">
          <ul class="nav navbar-nav navbar-right" >
             <li><a id="item" class="item" href="index.html" style="background-color:#4682B4; color:white;"onMouseOver="this.style.backgroundColor='#67c2ed';"onMouseOut="this.style.backgroundColor='#4682B4'" >Home</a></li>
-            <li><a id="item2" href="highlight.html" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Burma Highlights</a></li>
-            <li><a id="item3" href="tourProgram.html" style="background-color:#4682B4; color:white; border-color: #fff;
+            <li><a id="item2" href="highlight.html" style="background-color:#4682B4; color:white; border-color: #fff;
             border:2px;
-            border-style: solid;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Tour Programs</a></li>
+            border-style: solid;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Burma Highlights</a></li>
+            <li><a id="item3" href="tourProgram.html" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Tour Programs</a></li>
             <li><a id="item5" href="hotel.html" style="
             background-color:#4682B4;
             color:white;
@@ -190,229 +235,346 @@
   </div><!-- /.container-fluid -->
 </nav>
 <main>
-      <div class="w3-sidebar w3-bar-block w3-card" style="width:20%;left:0;margin-top:90px;">
-  <h3 class="w3-bar-item title" >Popular</h3>
-  <a href="#npt" class="w3-bar-item w3-button">Nay Pyi Taw</a>
-  <a href="#ygn" class="w3-bar-item w3-button">Yangon</a>
-  <a href="#mdy" class="w3-bar-item w3-button">Mandalay</a>
-  <a href="#pol" class="w3-bar-item w3-button">Pyin-Oo-Lwin</a>
-  <a href="#tg" class="w3-bar-item w3-button">Taung Gyi</a>
-  <a href="#ngp" class="w3-bar-item w3-button">Ngapali</a>
-  <a href="#ct" class="w3-bar-item w3-button">Chaung-Thar</a>
-  <h3 class="w3-bar-item title">Others</h3>
-</div>
-<div class="w3-container state"id="npt" style="padding-top:5%;margin-top: 5% ">
-    <div class="hotel-title"><h2>Nay Pyi Taw</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
+      <div class="w3-sidebar w3-bar-block w3-card hidden-sm hidden-xs" style="width:20%;left:0;margin-top:90px;overflow:scroll;">
+  <h3 class="w3-bar-item popular"  >Popular</h3>
+  <hr class="style14">
+  <a href="#bagan" class="w3-bar-item w3-button">Bagan</a>
+  <a href="#ubein" class="w3-bar-item w3-button">U Bein Temple</a>
+  <a href="#chin" class="w3-bar-item w3-button">Chin State</a>
+  <a href="#kalaw" class="w3-bar-item w3-button">Kalaw Trekking</a>
+  <a href="#inle" class="w3-bar-item w3-button">Inle Lake</a>
+  
+  
+  <h3 class="w3-bar-item ">Culture</h3>
+  <hr class="style14">
+  <a href="#shwedagon" class="w3-bar-item w3-button">Shwedagon</a>
+  <a href="#khy" class="w3-bar-item w3-button">Kyaik-Htee-Yoo</a>
+  <a href="#inwa" class="w3-bar-item w3-button">Inn Wa</a>
+   
+  <h3 class="w3-bar-item ">Adventure</h3>
+       <hr class="style14">
+   <a href="#kalaw" class="w3-bar-item w3-button">Kalaw Trekking</a>
+    <a href="#chin" class="w3-bar-item w3-button">Chin State</a>
+     <a href="#hsipaw" class="w3-bar-item w3-button">Hsi Paw Trekking</a>
       
-  </div>
-  <div class="w3-container state" id="ygn" >
-    <div class="hotel-title"><h2>Yangon</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="mdy">
-    <div class="hotel-title"><h2>Mandalay</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="pol">
-    <div class="hotel-title"><h2>Pyin Oo Lwin</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="tg">
-    <div class="hotel-title"><h2>Taung Gyi</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="ngp">
-    <div class="hotel-title"><h2>Ngapali</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="ct" style="margin-bottom: 5%">
-    <div class="hotel-title"><h2>Chaung Tha</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
+   
+   <h3 class="w3-bar-item ">Biking</h3>
+      <hr class="style14">
+   <a href="#ct" class="w3-bar-item w3-button">Myin kha</a>
+   <a href="#kalaw" class="w3-bar-item w3-button">Kin pun - kyaiktiyo</a>
+   <a href="#kalaw" class="w3-bar-item w3-button">Pindaya to kalaw</a>
+   <br><br><br><br>
+</div>
+ <div class="btn-group btn-block hidden-lg hidden-md menubutton" >
+  <button type="button" class="btn btn-primary btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Tour Programs <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
     
-  </div>
-     
-    </main>
-  <div class="footer">
-    Powered by <a href="#" style="color:#fff"> Boolean Tech</a>
-  </div>
+      <li><a href="#bagan" class="w3-bar-item w3-button">Bagan</a></li>
+      <li><a href="#ubein" class="w3-bar-item w3-button">U Bein Temple</a></li>
+      <li><a href="#chin" class="w3-bar-item w3-button">Chin State</a></li>
+      <li><a href="#kalaw" class="w3-bar-item w3-button">Kalaw Trekking</a></li>
+      <li><a href="#inle" class="w3-bar-item w3-button">Inle Lake</a></li>
+  
+  </ul>
 </div>
 
+  
+  <div class="w3-container state" id="bagan" style="margin-top: 60px">
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Bagan</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="http://static.asiawebdirect.com/m/bangkok/portals/myanmar/homepage/bagan/pagePropertiesImage/bagan.jpg.jpg"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Bagan is an ancient city located in the Mandalay Region of Myanmar. From the 9th to 13th centuries, the city was the capital of the Pagan Kingdom, the first kingdom that unified the regions that would later constitute modern Myanmar. During the kingdom's height between the 11th and 13th centuries, over 10,000 Buddhist temples, pagodas and monasteries were constructed in the Bagan plains alone, of which the remains of over 2,200 temples and pagodas still survive to the present day.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Region‎:</th><td> ‎Mandalay Region</td>
+      </tr>
+      <tr>
+        <th>Area:</th><td>104 km²</td>
+      </tr>
+      <tr>
+        <th>Founded:</th><td>mid-to-late 9th century</td>
+      </tr>
+      <tr>
+        <th>Number of airports:</th><td>1</td>
+      </tr>
+      
+    </table>
+    </div> 
+    </div>
+  </div>
+
+  <div class="w3-container state" id="ubein" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>U Bein Bridge</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://chrismartinphotography.files.wordpress.com/2011/01/mandalay-bridge-7184.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>U Bein Bridge is a crossing that spans the Taungthaman Lake near Amarapura in Myanmar. The 1.2-kilometre bridge was built around 1850 and is believed to be the oldest and (once) longest teakwood bridge in the world. Construction began when the capital of Ava Kingdom moved to Amarapura, and the bridge is named after the mayor who had it built. It is particularly busy during July and August when the lake is at its highest.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Locate:</th><td>Amarapura Township, Myanmar</td>
+      </tr>
+      <tr>
+        <th>Design:</th><td>Wooden Foot Bridge (Teak Bridge)</td>
+      </tr>
+      <tr>
+        <th>Total length:</th><td>3,967 ft (1,209 m) or 482 spans or 0.75 miles (1.2 km) (total bridge) (1086 posts)</td>
+      </tr>
+      <tr>
+        <th>Construction start:</th><td>1849</td>
+      </tr>
+      <tr>
+        <th>Construction end:</th><td>1851</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+  </div>
+
+  <div class="w3-container state" id="chin" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Chin State</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://myanmarlife.com/wp-content/uploads/2018/08/Rih-Lake2.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Chin State hkyang is a state in western Myanmar. The 36,019-square-kilometre (13,907 sq mi) Chin State is bordered by Sagaing Division and Magway Division to the east, Rakhine State to the south, Bangladesh to the south-west, and the Indian states of Mizoram to the west and Manipur to the north. The capital of the state is Hakha. The state is a mountainous region with few transportation links. Chin State is sparsely populated and remains one of the least developed areas of the country. There are 53 different subtribe and languages in Chin State.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Capital:</th><td>Hakha</td>
+      </tr>
+      <tr>
+        <th>Total Area:</th><td>36,018.8 km2</td>
+      </tr>
+      <tr>
+        <th>Total Pupulation:</th><td>478,801</td>
+      </tr>
+      <tr>
+        <th> Ethnicities:</th><td>Chin</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="kalaw" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Kalaw Trekking</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://s2.wklcdn.com/image_38/1151319/12081246/7477967Master.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Established by British civil servants as a summer resort, Kalaw retains much of its colonial feel. The cool air and cared-for streets make Kalaw holidays ideal for those wishing to take it easy and soak up the scenery. Kalaw has also come to be known as a trekkers' paradise, with a list of fascinating and challenging multi-day hikes across the surrounding landscape ensuring chances to meet local hill tribes and find high-altitude lakes. Kalaw is in Shan State. </p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Districts:</th><td>Taunggyi District</td>
+      </tr>
+      <tr>
+        <th>Township:</th><td>Kalaw Township</td>
+      </tr>
+      <tr>
+        <th>Division:</th><td>Shan State</td>
+      </tr>
+      <tr>
+        <th>Religions:</th><td>Buddhism</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="inle" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Inle Lake</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://www.ahstatic.com/photos/a095_hofh_00_p_2560x1440.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Inle Lake is in the Shan Hills of Myanmar. At its southwestern edge, Phaung Daw Oo Paya is a tiered pagoda with gilded Buddha statues. In the hills, near the market town of Indein, the stupas of Shwe Inn Dein Pagoda resemble a field of gold spires. The ruined stupas at nearby Nyaung Ohak have been reclaimed by forest. Maing Thauk village is split between land and water, with a wooden bridge connecting the two halves.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Area:</th><td>116.3 km²</td>
+      </tr>
+      <tr>
+        <th>Surface elevation:</th><td> 884 m</td>
+      </tr>
+      <tr>
+        <th>Location:</th><td>Shan State</td>
+      </tr>
+      <tr>
+        <th>Max. depth:</th><td>12 ft (3.7 m) (dry season; +5 ft in monsoon season)</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+  </div>
+
+
+  <div class="w3-container state" id="shwedagon" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Shwedagon Pagoda</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://osugamyanmartravels.com/wp-content/uploads/2018/04/shwedagon-pagoda-yangon-burma-myanmar.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>The Shwedagon Pagoda, officially named Shwedagon Zedi Daw and also known as the Great Dagon Pagoda and the Golden Pagoda, is a gilded stupa located in Yangon, Myanmar. The 326-foot-tall pagoda is situated on Singuttara Hill, to the west of Kandawgyi Lake, and dominates the Yangon skyline.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Address:</th><td>Bahan, Yangon</td>
+      </tr>
+      <tr>
+        <th>Height:</th><td>105 m</td>
+      </tr>
+      <tr>
+        <th>Opened:</th><td>1372</td>
+      </tr>
+      <tr>
+        <th>Architect:</th><td>Okkalapa of Burma</td>
+      </tr>
+       <tr>
+        <th>Opening Hours:</th><td>04:00-22:00 hrs</td>
+      </tr>
+      
+    </table>
+    </div> 
+    </div><div class="w3-container state" id="khy" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Kyaik Htee Yoo</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://www.tmtmtour.com/wp-content/uploads/2018/01/shutterstock_554325643.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Kyaiktiyo Pagoda is a well-known Buddhist pilgrimage site in Mon State, Burma. It is a small pagoda (7.3 metres (24 ft)) built on the top of a granite boulder covered with gold leaves pasted on by its male devotees. According to legend, the Golden Rock itself is precariously perched on a strand of the Buddha's hair. The balancing rock seems to defy gravity, as it perpetually appears to be on the verge of rolling down the hill. The rock and the pagoda are at the top of Mt. Kyaiktiyo. </p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Region:</th><td>Mon State</td>
+      </tr>
+      <tr>
+        <th>Elevation:</th><td>‎1,100 m (3,609 ft)</td>
+      </tr>
+      <tr>
+        <th>Spire height‎:</th><td>15 m (49 ft) </td>
+      </tr>
+      <tr>
+        <th>Sect:</th><td>Theravada Buddhism</td>
+      </tr>
+      <tr>
+        <th>Municipality:</th><td> Kyaikto</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="inwa" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Inn Wa</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="http://www.treasuremergui.com/wp-content/uploads/2017/05/inwa.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Inwa is an ancient city near Mandalay, in central Myanmar (formerly Burma). It's known for religious structures left over from several reigns as the nation's capital, from the 14th to the 19th centuries. Dominating these is the Bagaya Kyaung, a 19th-century working monastery made of teak. The large, brick-and-stucco Maha Aungmye Bonzan monastery dates back to the 1800s. Its crypt area is a haven for bats.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Region:</th><td> Mandalay Region</td>
+      </tr>
+      <tr>
+        <th>District:</th><td>Kyaukse District)</td>
+      </tr>
+      <tr>
+        <th>Founded:</th><td>26 February 1365</td>
+      </tr>
+      <tr>
+        <th>Ethnicities:</th><td>Bamar</td>
+      </tr>
+      <tr>
+        <th>Religions:</th><td>Theravada Buddhism</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="hsipaw" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Hsipaw Trekking</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://diytravelhq.com/wp-content/uploads/2016/08/Hsipaw-Trekking-1024x624.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Hsipaw, is the principal town of Hsipaw Township in Shan State, Myanmar on the banks of the Duthawadi River. It is 200 km north-east of Mandalay. </p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Division:</th><td>Shan State</td>
+      </tr>
+      <tr>
+        <th>Religions:</th><td>Buddhism</td>
+      </tr>
+      
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="bagan" style="margin-top: 5%">
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Bagan</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="http://static.asiawebdirect.com/m/bangkok/portals/myanmar/homepage/bagan/pagePropertiesImage/bagan.jpg.jpg"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Bagan is an ancient city located in the Mandalay Region of Myanmar. From the 9th to 13th centuries, the city was the capital of the Pagan Kingdom, the first kingdom that unified the regions that would later constitute modern Myanmar. During the kingdom's height between the 11th and 13th centuries, over 10,000 Buddhist temples, pagodas and monasteries were constructed in the Bagan plains alone, of which the remains of over 2,200 temples and pagodas still survive to the present day.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Location:</th><td>near Kalaw, Shan (Myanmar [Burma])</td>
+      </tr>
+      <tr>
+        <th>Area:</th><td>104 km²</td>
+      </tr>
+      <tr>
+        <th>Founded:</th><td>mid-to-late 9th century</td>
+      </tr>
+      <tr>
+        <th>Number of airports:</th><td>1</td>
+      </tr>
+      
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="bagan" style="margin-top: 5%">
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Bagan</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="http://static.asiawebdirect.com/m/bangkok/portals/myanmar/homepage/bagan/pagePropertiesImage/bagan.jpg.jpg"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Bagan is an ancient city located in the Mandalay Region of Myanmar. From the 9th to 13th centuries, the city was the capital of the Pagan Kingdom, the first kingdom that unified the regions that would later constitute modern Myanmar. During the kingdom's height between the 11th and 13th centuries, over 10,000 Buddhist temples, pagodas and monasteries were constructed in the Bagan plains alone, of which the remains of over 2,200 temples and pagodas still survive to the present day.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Region‎:</th><td> ‎Mandalay Region</td>
+      </tr>
+      <tr>
+        <th>Area:</th><td>104 km²</td>
+      </tr>
+      <tr>
+        <th>Founded:</th><td>mid-to-late 9th century</td>
+      </tr>
+      <tr>
+        <th>Number of airports:</th><td>1</td>
+      </tr>
+      
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="bagan" style="margin-top: 5%">
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Bagan</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="http://static.asiawebdirect.com/m/bangkok/portals/myanmar/homepage/bagan/pagePropertiesImage/bagan.jpg.jpg"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Bagan is an ancient city located in the Mandalay Region of Myanmar. From the 9th to 13th centuries, the city was the capital of the Pagan Kingdom, the first kingdom that unified the regions that would later constitute modern Myanmar. During the kingdom's height between the 11th and 13th centuries, over 10,000 Buddhist temples, pagodas and monasteries were constructed in the Bagan plains alone, of which the remains of over 2,200 temples and pagodas still survive to the present day.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Region‎:</th><td> ‎Mandalay Region</td>
+      </tr>
+      <tr>
+        <th>Area:</th><td>104 km²</td>
+      </tr>
+      <tr>
+        <th>Founded:</th><td>mid-to-late 9th century</td>
+      </tr>
+      <tr>
+        <th>Number of airports:</th><td>1</td>
+      </tr>
+      
+    </table>
+    </div> 
+    </div>
 <script>
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 /*window.onscroll = function() {scrollFunction()};
@@ -437,6 +599,9 @@
    }
 }*/
 </script>
-
+<div class="footer">
+    Powered by <a href="#" style="color:#fff"> Boolean Tech</a>
+  </div>
+</div>
   </body>
 </html>

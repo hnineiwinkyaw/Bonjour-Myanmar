@@ -12,7 +12,11 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="modal.js"></script>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -22,9 +26,52 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="random.js"></script>
+    
 
+    <script type="text/javascript" src="random.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+   (function(){
+      emailjs.init("user_gDGbLymYDnzCXBAGqjxGK");
+   })();
+</script>
+    <script>
+    $(document).ready(function(){
+      $('#loadingModal').modal('show');
+        var date_input=$('input[name="a_date"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+
+         var date_input2=$('input[name="d_date"]'); //our date input has the name "date"
+        var container2=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input2.datepicker({
+            format: 'mm/dd/yyyy',
+            container: container2,
+            todayHighlight: true,
+            autoclose: true,
+        })
+
+        $('#bt1').click(function() {
+        /*$('#fr1').attr('action',
+                       'mailto:hnineiwinkyaw.ycc@gmail.com?subject=' +
+                       $('#tb1').val() + '&body=' + $('#tb2').val());*/
+        $('#fr1').attr('action',
+                       'mailto:hnineiwinkyaw.ycc@gmail.com?subject=hired&body=Congrats');
+        $('#fr1').submit();
+    });
+
+        
+    })
+
+</script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,7 +82,7 @@
     .menubutton{
       top: 84px;
     /* padding-top: 10%; */
-    z-index: 1023;
+    z-index: 2;
     position: fixed;
     display: block;
     }
@@ -108,7 +155,7 @@
     .navbar-brand{
       font-size:2.5em;color:white;margin-top:10px;transition:0.2s;
     }
-    .navbar{ height:80px; background: #4682B4;border:none;
+    .navbar{ height:80px; background: #4682B4;border:none;z-index: 3;
 
     }
   
@@ -235,7 +282,8 @@
             border:2px;
             border-style: solid;
            "onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
-            <li><a id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a></li>
+            <li><a data-target="#exampleModal" role="button" data-toggle="modal" id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a>
+            </li>
             
           </ul>
       </div>
@@ -531,8 +579,90 @@ Sule Shangri-La Yangon has designated areas for smoking.<br>
 }*/
 </script>
 <div class="footer">
-    Powered by <a href="#" style="color:#fff"> Ngar doe</a>
+    Powered by <a href="#" style="color:#fff"> Boolean Tech</a>
   </div>
 </div>
   </body>
+<div class="modal fade" id="exampleModal" style="z-index: 1023" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="top: 55px;z-index: 1023">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Enquiry Form</h4>
+      </div>
+      <div class="modal-body">
+        <form id="fr1">
+
+          <div style="display: flex;">
+          <div class="form-group" style="margin-right: 4%; width: 48%">
+            <label for="first-name" class="control-label">First Name:</label>
+            <input type="text" style="width: 100%" name="first-name" class="form-control" id="first-name">
+          </div>
+          <div class="form-group" style="width: 48%">
+            <label for="last-name" class="control-label">Last Name:</label>
+            <input type="text" class="form-control" name="last-name" id="last-name" style="width: 100%">
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label for="email" class="control-label">Email:</label>
+            <input type="email"  name="email" class="form-control" id="email">
+          </div>
+
+          <div style="display: flex;">
+          <div class="form-group" style="margin-right: 4%; width: 48%"> <!-- Date input -->
+            <label class="control-label" for="a_date">Estimate Arrival Date</label>
+            <input class="form-control" id="adate" name="a_date" placeholder="MM/DD/YYY" type="text"/>
+          </div>
+          <div class="form-group" style="width: 48%">
+            <label class="control-label" for="d_date">Estimate Departure Date</label>
+            <input class="form-control" id="ddate" name="d_date" placeholder="MM/DD/YYY" type="text"/>
+          </div>
+        </div>
+
+        <div style="display: flex;">
+          <div class="form-group" style="margin-right: 5%; width: 30%"> <!-- Date input -->
+            <label class="control-label" for="adults">Adults</label>
+            <input class="form-control" id="adults" name="adults" type="number" min="0"/>
+          </div>
+          <div class="form-group" style="margin-right: 5%;width: 30%">
+            <label class="control-label" for="children">Children</label>
+            <input class="form-control" name="children" id="children" type="number" min="0"/>
+          </div>
+          <div class="form-group" style="width: 30%">
+            <label class="control-label" for="infants">Infants</label>
+            <input class="form-control" id="infants" name="infants" type="number" min="0"/>
+          </div>
+        </div>
+
+          <div class="form-group">
+            <label for="message-text" class="control-label">Plans or Ideas:</label>
+            <textarea class="form-control" rows="5" name="message-text" id="message-text"></textarea>
+          </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+       
+        <button type="button" id="just_load_please" class="btn btn-primary" >Submit
+          
+        </button>
+
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="loadMe" tabindex="-1" style="z-index: 1023;" role="dialog" aria-labelledby="loadMeLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content" style="top:200px">
+      <div class="modal-body text-center">
+        <div class="loader"></div>
+        <div clas="loader-txt">
+          <p>Send Information to Bonjour Myanmar... Please wait ...</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </html>
