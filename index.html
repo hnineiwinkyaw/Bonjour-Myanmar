@@ -357,16 +357,15 @@ window.onscroll = function() {scrollFunction()};
 
 
   </body>
-<div class="modal fade" id="exampleModal" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content" style="top: 27px">
+<div class="modal fade" id="exampleModal" style="z-index: 1023;" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document" style="overflow-y: initial !important">
+    <div class="modal-content" style="top: 0px;z-index: 1023;">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel">Enquiry Form</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style=" overflow-y: auto;height: 400px;">
         <form id="fr1">
-
           <div style="display: flex;">
           <div class="form-group" style="margin-right: 4%; width: 48%">
             <label for="first-name" class="control-label">First Name:</label>

@@ -52,7 +52,7 @@ $(document).ready(function() {
     	document.getElementById("children").value = '';
     	document.getElementById("infants").value = '';
     	document.getElementById("message-text").value = '';
-	   swal("Failed!", "Your enquiry has been failed! Check your connection or contact us via email directly", "success");
+	   swal("Failed!", "Your enquiry has been failed! Check your connection or contact us via email directly", "error");
 	});
     //setTimeout(function() {
       //$("#loadMe").modal("hide");
