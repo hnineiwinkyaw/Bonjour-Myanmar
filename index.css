@@ -265,5 +265,14 @@ hr.style14 {
     from {opacity: 0} 
     to {opacity: 1}
 }
-
-
+.text-contain{
+    width:100%;
+    height:40px;
+    background-color:rgba(0,0,0,0.7);
+    margin-top:160px;
+    cursor: pointer;
+}
+.text-contain a {text-decoration: none;padding:0px 35% 10px;font-size:25px;color:white;}
+.text-contain a :hover{
+    color:#d1d1d1;
+}
