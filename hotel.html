@@ -10,17 +10,21 @@
 
     <!-- Bootstrap -->
 
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href= "index.css" type="text/css" rel = "stylesheet">
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="random.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -28,6 +32,27 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    .thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+    .w3-card::-webkit-scrollbar {
+    width: 2px;
+}
+    .popular{
+      padding-bottom: 0;
+      padding-top: 0;
+      margin-top: 10px;
+      margin-left: 30px;
+    }
     .seemore{
       margin: 2%;
     display: flex;
@@ -94,6 +119,14 @@
 
 }
  @media screen and (max-width: 1000.1px) {
+   .highlight{
+      height:300px;
+      font-size:14px;
+     }
+     .hig-img1{
+      width:40%;
+      height:150px;
+     }
   .navbar-brand{
     font-size:1em; /* The width is 100%, when the viewport is 800px or smaller */
   }
@@ -119,6 +152,14 @@
    }
 }
   @media screen and (max-width: 700px) {
+     .highlight{
+      height:300px;
+      font-size:7px;
+     }
+     .hig-img1{
+      width:35%;
+      height:80px;
+     }
   .navbar-brand{
     font-size:1.5em; /* The width is 100%, when the viewport is 800px or smaller */
   }
@@ -182,10 +223,10 @@
             <li><a id="item3" href="tourProgram.html" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Tour Programs</a></li>
             <li><a id="item5" href="hotel.html" style="
             background-color:#4682B4;
-            color:white;
-            border-color: #fff;
+            color:white;border-color: #fff;
             border:2px;
-            border-style: solid;"onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
+            border-style: solid;
+           "onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
             <li><a id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a></li>
             
           </ul>
@@ -196,247 +237,251 @@
   </div><!-- /.container-fluid -->
 </nav>
 <main>
-      <div class="w3-sidebar w3-bar-block w3-card" style="width:20%;left:0;margin-top:90px;">
-  <h3 class="w3-bar-item title" >Popular</h3>
-  <a href="#npt" class="w3-bar-item w3-button">Nay Pyi Taw</a>
-  <a href="#ygn" class="w3-bar-item w3-button">Yangon</a>
-  <a href="#mdy" class="w3-bar-item w3-button">Mandalay</a>
-  <a href="#pol" class="w3-bar-item w3-button">Pyin-Oo-Lwin</a>
-  <a href="#tg" class="w3-bar-item w3-button">Taung Gyi</a>
-  <a href="#ngp" class="w3-bar-item w3-button">Ngapali</a>
-  <a href="#ct" class="w3-bar-item w3-button">Chaung-Thar</a>
-  <h3 class="w3-bar-item title">Others</h3>
-</div>
-<div class="w3-container state"id="npt" style="padding-top:5%;margin-top: 5% ">
-
-    <div class="hotel-title"><h2>Nay Pyi Taw</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info"data-target="#npt1" role="button" data-toggle="modal"data-myvalue="trouducul" data-myvar="bisbis" >See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
+      <div class="w3-sidebar w3-bar-block w3-card" style="width:20%;left:0;margin-top:90px;overflow:scroll;">
+  <h3 class="w3-bar-item"  >Nay Pyi Taw</h3>
+  <hr class="style14">
+  <a href="#proy" class="w3-bar-item w3-button">PARKROYAL Nay Pyi Taw</a>
+  <a href="#gah" class="w3-bar-item w3-button">Grand Amara Hotel</a>
+  <a href="#tlg" class="w3-bar-item w3-button">The Lake Garden </a>
+  
+  
+  
+  <h3 class="w3-bar-item ">Yangon</h3>
+  <hr class="style14">
+  <a href="#suleshan" class="w3-bar-item w3-button">Sule Shangri-La Yangon</a>
+  <a href="#khy" class="w3-bar-item w3-button">Kyaik-Htee-Yoo</a>
+  <a href="#inwa" class="w3-bar-item w3-button">Inn Wa</a>
+   
+  <h3 class="w3-bar-item ">Adventure</h3>
+       <hr class="style14">
+   <a href="#kalaw" class="w3-bar-item w3-button">Kalaw Trekking</a>
+    <a href="#chin" class="w3-bar-item w3-button">Chin State</a>
+     <a href="#hsipaw" class="w3-bar-item w3-button">Hsi Paw Trekking</a>
       
-  </div>
-  <div class="w3-container state" id="ygn" >
-    <div class="hotel-title"><h2>Yangon</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="mdy">
-    <div class="hotel-title"><h2>Mandalay</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-
-<div>
-            <a id="modalPopper" class="btn">Popup Modal Message</a>
-    <div id="msgModal" class="modal hide fade">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3></h3>
-      </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary callback-btn" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+   
+   <h3 class="w3-bar-item ">Biking</h3>
+      <hr class="style14">
+   <a href="#ct" class="w3-bar-item w3-button">Myin kha</a>
+   <a href="#kalaw" class="w3-bar-item w3-button">Kin pun - kyaiktiyo</a>
+   <a href="#kalaw" class="w3-bar-item w3-button">Pindaya to kalaw</a>
+   <br><br><br><br>
 </div>
+  
+  <div class="w3-container state" id="proy" style="margin-top: 5%">
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>PARKROYAL Nay Pyi Taw</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://images.trvl-media.com/hotels/8000000/7760000/7757600/7757511/91b5c323_z.jpg"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>In addition to a golf course, PARKROYAL Nay Pyi Taw features an outdoor pool and a health club. The hotel offers a restaurant and a coffee shop/café. Guests can unwind with a drink at one of the hotel's bars, which include a poolside bar and a bar/lounge. Public areas are equipped with complimentary wired and wireless Internet access.This 4.5-star property offers access to a business center, limo/town car service, and meeting rooms. Event facilities measure 12379 square feet (1150 square meters). This luxury hotel also offers a children's pool, a sauna, and spa services. For a surcharge, the property provides a roundtrip airport shuttle (available 24 hours) and an area shuttle. Onsite self parking and valet parking are complimentary.<br>
+
+PARKROYAL Nay Pyi Taw has designated areas for smoking.</p> 
+          
+    <table style="color:#000080" >
+      <tr>
+        <th>Location:</th><td>
+ Jade Villa No. 13/14, Hotel Zone, Naypyidaw, Mandalay </td>
+      </tr>
+      <tr>
+        <th>Phone:</th><td>1-866-599-6674</td>
+      </tr>
+
+ 
+      <tr>
+        <th class="fas fa-wifi" > </th><td>Wifi Available</td>
+      </tr>
+      <tr>
+        <th class="fas fa-car"></th><td>Parking Provided</td>
+      </tr>
+      <tr>
+        <th class="fa fa-cutlery"></th><td>Restaurant Included</td>
+      </tr>
+      <tr>
+        <th class="fas fa-swimming-pool"></th><td>Pool Included</td>
+      </tr>
+    </table>
+     </div>
+    </div>
+  </div>
+
+  <div class="w3-container state" id="gah" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Grand Amara Hotel</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://images.trvl-media.com/hotels/18000000/17760000/17752400/17752379/c49966e2_z.jpg"  alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+             <p>Grand Amara Hotel features an outdoor pool and a fitness center. Dining options at the hotel include a restaurant and a snack bar/deli. Guests can unwind with a drink at one of the hotel's bars, which include a swim-up bar and a bar/lounge. Wireless Internet access is complimentary.
+Business amenities at this 4-star property consist of a 24-hour business center, limo/town car service, and meeting rooms. This family-friendly hotel also offers tour/ticket assistance, barbecue grills, and multilingual staff. For a surcharge, a roundtrip airport shuttle (available 24 hours) is offered to guests. Onsite self parking is complimentary.
+<br><br>
+Grand Amara Hotel has designated areas for smoking.</p> 
+          
+    <table style="color:#000080" >
+      <tr>
+        <th>Location:</th><td>
+ No.(5, 6), Jade Villa, Naypyidaw, </td>
+      </tr>
+      <tr>
+        <th>Phone:</th><td>1-866-599-6674</td>
+      </tr>
+
+ 
+      <tr>
+        <th class="fas fa-wifi" > </th><td>Wifi Available</td>
+      </tr>
+      <tr>
+        <th class="fas fa-car"></th><td>Parking Provided</td>
+      </tr>
+      <tr>
+        <th class="fa fa-cutlery"></th><td>Restaurant Included</td>
+      </tr>
+      <tr>
+        <th class="fas fa-swimming-pool"></th><td>Pool Included</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+  </div>
+
+  <div class="w3-container state" id="tlg" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>The Lake Garden </h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://pix8.agoda.net/hotelImages/745/745685/745685_16103117260048292366.jpg?s=450x450" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>In addition to a full-service spa, The Lake Garden Nay Pyi Taw MGallery Collection features an indoor tennis court and an outdoor pool. Dining is available at one of the hotel's 2 restaurants. A bar/lounge is on site where guests can unwind with a drink. A computer station is located on site and wireless Internet access is complimentary.
+A business center is on site at this 4.5-star property. This luxury hotel also offers a fitness center, a sauna, and spa services. Onsite self parking is complimentary.
+<br><br>
+The Lake Garden Nay Pyi Taw MGallery Collection has designated areas for smoking.</p> 
+          
+
+          
+  
+           
+    <table style="color:#000080" >
+      <tr>
+        <th>Location:</th><td>
+  Dekkhina Thiri road, Naypyidaw, </td>
+      </tr>
+      <tr>
+        <th>Phone:</th><td>1-800-238-0767</td>
+      </tr>
+
+ 
+      <tr>
+        <th class="fas fa-wifi" > </th><td>Wifi Available</td>
+      </tr>
+      <tr>
+        <th class="fas fa-car"></th><td>Parking Provided</td>
+      </tr>
+      <tr>
+        <th class="fas fa-swimming-pool"></th><td>Pool Included</td>
+      </tr>
+        <tr>
+        <th class="fa fa-briefcase"></th><td>Bussiness Center</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="suleshan" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Sule Shangri-La Yangon</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://cdn.hometogo.net/medium/v1/99a/09b/544b359ad00126af18b924cd39.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>In addition to an outdoor pool and a children's pool, Sule Shangri-La Yangon provides a health club and a spa tub. Dining is available at one of the hotel's 2 restaurants and guests can grab coffee at the coffee shop/café. Guests can unwind with a drink at one of the hotel's 2 bars/lounges. A computer station is located on site and wireless Internet access is complimentary.
+This 4.5-star property offers access to a 24-hour business center and limo/town car service. 7 meeting rooms are available. This luxury hotel also offers a sauna, spa services, and tour/ticket assistance. For a surcharge, the property provides a roundtrip airport shuttle (available 24 hours) and a shopping center shuttle. Limited complimentary onsite parking is available on a first-come, first-served basis.
+<br><br>
+Sule Shangri-La Yangon has designated areas for smoking.<br>
+</p> 
+          
+    <table style="color:#000080" >
+      <tr>
+        <th>Location:</th><td>
+ Jade Villa No. 13/14, Hotel Zone, Naypyidaw, Mandalay </td>
+      </tr>
+      <tr>
+        <th>Phone:</th><td>1-866-599-6674</td>
+      </tr>
+
+ 
+      <tr>
+        <th class="fas fa-wifi" > </th><td>Wifi Available</td>
+      </tr>
+      <tr>
+        <th class="fas fa-car"></th><td>Parking Provided</td>
+      </tr>
+      <tr>
+        <th class="fas fa-swimming-pool"></th><td>Pool Included</td>
+      </tr>
+      <tr>
+        <th class="fa fa-briefcase"></th><td>Bussiness Center</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+    <div class="w3-container state" id="inle" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Inle Lake</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://www.ahstatic.com/photos/a095_hofh_00_p_2560x1440.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Inle Lake is in the Shan Hills of Myanmar. At its southwestern edge, Phaung Daw Oo Paya is a tiered pagoda with gilded Buddha statues. In the hills, near the market town of Indein, the stupas of Shwe Inn Dein Pagoda resemble a field of gold spires. The ruined stupas at nearby Nyaung Ohak have been reclaimed by forest. Maing Thauk village is split between land and water, with a wooden bridge connecting the two halves.</p> 
+          
+    <table style="color:#000080">
+      <tr>
+        <th>Area:</th><td>116.3 km²</td>
+      </tr>
+      <tr>
+        <th>Surface elevation:</th><td> 884 m</td>
+      </tr>
+      <tr>
+        <th>Location:</th><td>Shan State</td>
+      </tr>
+      <tr>
+        <th>Max. depth:</th><td>12 ft (3.7 m) (dry season; +5 ft in monsoon season)</td>
+      </tr>
+    </table>
+    </div> 
+    </div>
+  </div>
 
 
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="pol">
-    <div class="hotel-title"><h2>Pyin Oo Lwin</h2></div>
-    <div class = "divi" style="margin-top: 0" >
+  <div class="w3-container state" id="shwedagon" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Shwedagon Pagoda</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://osugamyanmartravels.com/wp-content/uploads/2018/04/shwedagon-pagoda-yangon-burma-myanmar.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>The Shwedagon Pagoda, officially named Shwedagon Zedi Daw and also known as the Great Dagon Pagoda and the Golden Pagoda, is a gilded stupa located in Yangon, Myanmar. The 326-foot-tall pagoda is situated on Singuttara Hill, to the west of Kandawgyi Lake, and dominates the Yangon skyline.</p> 
           
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="tg">
-    <div class="hotel-title"><h2>Taung Gyi</h2></div>
-    <div class = "divi" style="margin-top: 0" >
+    <table style="color:#000080">
+      <tr>
+        <th>Address:</th><td>Bahan, Yangon</td>
+      </tr>
+      <tr>
+        <th>Height:</th><td>105 m</td>
+      </tr>
+      <tr>
+        <th>Opened:</th><td>1372</td>
+      </tr>
+      <tr>
+        <th>Architect:</th><td>Okkalapa of Burma</td>
+      </tr>
+       <tr>
+        <th>Opening Hours:</th><td>04:00-22:00 hrs</td>
+      </tr>
+      
+    </table>
+    </div> 
+    </div><div class="w3-container state" id="khy" >
+    <div class="col-md-12 col-sm-12 col-xs-12"> <h3>Kyaik Htee Yoo</h3> </div> 
+        <div class="col-md-4 col-sm-4 col-xs-12">
+           <img class="img-responsive thumbnail" src="https://www.tmtmtour.com/wp-content/uploads/2018/01/shutterstock_554325643.jpg" alt="Book The Strand Hotel with Myanmar Travel Agency"> </div> 
+           <div class="col-md-8 col-sm-8 col-xs-12"> 
+              <p>Kyaiktiyo Pagoda is a well-known Buddhist pilgrimage site in Mon State, Burma. It is a small pagoda (7.3 metres (24 ft)) built on the top of a granite boulder covered with gold leaves pasted on by its male devotees. According to legend, the Golden Rock itself is precariously perched on a strand of the Buddha's hair. The balancing rock seems to defy gravity, as it perpetually appears to be on the verge of rolling down the hill. The rock and the pagoda are at the top of Mt. Kyaiktiyo. </p> 
           
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="ngp">
-    <div class="hotel-title"><h2>Ngapali</h2></div>
-    <div class = "divi" style="margin-top: 0" >
+
           
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
             </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-  </div>
-  <div class="w3-container state"id="ct" style="margin-bottom: 5%">
-    <div class="hotel-title"><h2>Chaung Tha</h2></div>
-    <div class = "divi" style="margin-top: 0" >
-          
-          <div class="row-container">
-            <div class="sub-items">
-            <a style="cursor: pointer;">
-              <img src="chin2.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-          </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;" >
-              <img src="palace.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-            <div class="sub-items">
-              <a style="cursor: pointer;">
-              <img src="mandalay.jpg" class="imgsub">
-            </a>
-            <div class="seemore"> <button class="btn btn-info">See more</button>
-            </div>
-            </div>
-          </div>
-        </div>
-    
-  </div>
      
     </main>
-  <div class="footer">
-    Powered by <a href="#" style="color:#fff"> Boolean Tech</a>
-  </div>
+  
 </div>
+
 
 <script>
 // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
@@ -462,49 +507,9 @@
    }
 }*/
 </script>
-
-  </body>
-
-  <div class="modal fade" id="npt1" data-backdrop="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content" style="top: 80px">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" >Park Royal Hotel</h4>
-      </div>
-        <div class="modal-body">
-         <div class="row">
-              <div class="col-xs-8 col-sm-6" style="width:50%; height:180px">
-               <img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-the-colony-4629618286-4x3" style="width:100%;height:180px">
-              </div>
-              <div class="col-xs-4 col-sm-6">
-                <span > Set in Myanmar’s new administrative capital, PARKROYAL Nay Pyi Taw offers you a premium hotel experience. Unsure where to explore? Let our PARKROYAL people connect you to a world of unique experiences. </span>
-              
-              </div>
-              <div class="col-xs-4 col-sm-6">
-                <span class="fa fa-wifi sub-item-hotel"></span>
-                <span class="sub-item-hotel"> Wifi</span>
-              </div>
-              <div class="col-xs-4 col-sm-6">
-                 <span class="  fa fa-car sub-item-hotel"></span>
-                <span class="sub-item-hotel"> Parking</span>
-              </div>
-              <div class="col-xs-4 col-sm-6">
-                <span class="  fa fa-cutlery sub-item-hotel" > </span>
-                <span  class="sub-item-hotel"> &nbsp;Restaurent</span>
-              </div>
-              <span id="modal-myvalue"></span> <span id="modal-myvar"></span>
-            </div>
-      
-       
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        
-      </div>
-      
-    </div>
+<div class="footer">
+    Powered by <a href="#" style="color:#fff"> Ngar doe</a>
   </div>
 </div>
-<script>
+  </body>
 </html>
