@@ -104,7 +104,7 @@ hr.style14 {
 
  @media screen and (max-width: 700px) {
   .row-container {
-    display: block;
+    display: flex;
     height: auto;
     margin-left: 7%;
 }
@@ -259,4 +259,4 @@ hr.style14 {
     to {opacity: 1}
 }
 
->>>>>>> e62970236c19dcf63523315b21ece529fea7cb2f
+
