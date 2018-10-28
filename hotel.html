@@ -101,6 +101,9 @@
     .w3-card::-webkit-scrollbar {
     width: 2px;
 }
+    .modal-backdrop {
+        z-index: -1;
+      }
     .popular{
       padding-bottom: 0;
       padding-top: 0;
@@ -282,7 +285,7 @@
             border:2px;
             border-style: solid;
            "onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Hotel</a></li>
-            <li><a data-target="#exampleModal" role="button" data-toggle="modal" id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a>
+            <li><a data-target="#loadMe" role="button" data-toggle="modal" id="item4" href="#" style="background-color:#4682B4; color:white;" onMouseOver="this.style.backgroundColor='#67c2ed'"onMouseOut="this.style.backgroundColor='#4682B4'">Contact Us</a>
             </li>
             
           </ul>
@@ -653,9 +656,9 @@ Sule Shangri-La Yangon has designated areas for smoking.<br>
     </div>
   </div>
 </div>
-<div class="modal fade" id="loadMe" tabindex="-1" style="z-index: 1023;" role="dialog" aria-labelledby="loadMeLabel">
+<div class="modal fade" id="loadMe" tabindex="-1" style="z-index: 1030;" role="dialog" aria-labelledby="loadMeLabel">
   <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content" style="top:200px">
+    <div class="modal-content" style="top:200px;z-index: 1030;">
       <div class="modal-body text-center">
         <div class="loader"></div>
         <div clas="loader-txt">
