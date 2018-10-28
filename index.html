@@ -105,6 +105,9 @@
     .navbar{ height:80px; background: transparent;border:none;
       z-index: 2;
     }
+    .homeImg{
+      height: auto;
+    }
     .center{
       padding-top: 10px;
       display: flex;
@@ -145,6 +148,12 @@
   .navbar-right{
     font-size:1em; /* The width is 100%, when the viewport is 800px or smaller */
     
+  }
+  .homeImg{
+    height: 400px!important;
+  }
+  .carousel-inner{
+    height: 400px;
   }
   .nav li a{
       padding:5px;color:white;transition:0.2s; background-color:#67a1bc;margin-left: 0px;border-radius: 0px
@@ -219,7 +228,7 @@
             <div class="carousel-inner">
 
               <div class="item active">
-                <img src="chin.JPG" alt="Los Angeles" style="width:100%;">
+                <img src="chin.JPG" alt="Los Angeles" class="homeImg" style="width:100%;">
                 <div class="carousel-caption">
                   <h3>Chin State</h3>
                   <p>Chin State is always so much fun!</p>
@@ -227,7 +236,7 @@
               </div>
 
               <div class="item">
-                <img src="bagan.JPG" alt="Chicago" style="width:100%;">
+                <img src="bagan.JPG" alt="Chicago" class="homeImg" style="width:100%;">
                 <div class="carousel-caption">
                   <h3>Bagan</h3>
                   <p>Thank you, Chicago!</p>
@@ -235,7 +244,7 @@
               </div>
             
               <div class="item">
-                <img src="inle.JPG" alt="New York" style="width:100%;">
+                <img src="inle.JPG" alt="New York" class="homeImg" style="width:100%;">
                 <div class="carousel-caption">
                   <h3>Inle Lake</h3>
                   <p>We love the Big Apple!</p>
