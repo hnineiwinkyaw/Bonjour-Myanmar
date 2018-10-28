@@ -32,6 +32,13 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
+    .menubutton{
+      top: 84px;
+    /* padding-top: 10%; */
+    z-index: 1023;
+    position: fixed;
+    display: block;
+    }
     .thumbnail {
     display: block;
     padding: 4px;
@@ -189,7 +196,8 @@
     font-size:1.5em;
    }
    .state{
-    padding-top: 18%
+    padding-top: 18%;
+    width: 100%;
    }
     
 }
@@ -237,7 +245,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 <main>
-      <div class="w3-sidebar w3-bar-block w3-card" style="width:20%;left:0;margin-top:90px;overflow:scroll;">
+      <div class="w3-sidebar w3-bar-block w3-card hidden-sm hidden-xs" style="width:20%;left:0;margin-top:90px;overflow:scroll;">
   <h3 class="w3-bar-item"  >Nay Pyi Taw</h3>
   <hr class="style14">
   <a href="#proy" class="w3-bar-item w3-button">PARKROYAL Nay Pyi Taw</a>
@@ -266,8 +274,23 @@
    <a href="#kalaw" class="w3-bar-item w3-button">Pindaya to kalaw</a>
    <br><br><br><br>
 </div>
+<div class="btn-group btn-block hidden-lg hidden-md menubutton" >
+  <button type="button" class="btn btn-primary btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Hotel List <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    
+      <li><a href="#proy" class="w3-bar-item w3-button">PARKROYAL Nay Pyi Taw</a></li>
+      <li><a href="#gah" class="w3-bar-item w3-button">Grand Amara Hotel</a></li>
+      <li><a href="#tlg" class="w3-bar-item w3-button">The Lake Garden </a></li>
+      <li><a href="#suleshan" class="w3-bar-item w3-button">Sule Shangri-La Yangon</a></li>
+      <li><a href="#khy" class="w3-bar-item w3-button">Kyaik-Htee-Yoo</a></li>
+      <li><a href="#inwa" class="w3-bar-item w3-button">Inn Wa</a></li>
   
-  <div class="w3-container state" id="proy" style="margin-top: 5%">
+  </ul>
+</div>
+  
+  <div class="w3-container state" id="proy" style="margin-top: 60px">
     <div class="col-md-12 col-sm-12 col-xs-12"> <h3>PARKROYAL Nay Pyi Taw</h3> </div> 
         <div class="col-md-4 col-sm-4 col-xs-12">
            <img class="img-responsive thumbnail" src="https://images.trvl-media.com/hotels/8000000/7760000/7757600/7757511/91b5c323_z.jpg"> </div> 
